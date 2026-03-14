@@ -7,208 +7,314 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --mac-red: #ff3c00;
-            --mac-dark: #1a1a1a;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
-        }
+        :root { --mac-red: #ff3c00; --mac-dark: #1a1a1a; }
+        body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; }
         h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
 
-        /* Panel Stilleri */
+        .nav-link-custom {
+            color: #ccc !important; font-weight: 600; font-size: 0.85rem; 
+            transition: 0.3s; letter-spacing: 0.5px; text-decoration: none;
+        }
+        .nav-link-custom:hover { color: var(--mac-red) !important; transform: translateY(-2px); }
+
+        .lang-box {
+            background: #000; border: 1px solid var(--mac-red); border-radius: 6px;
+            display: flex; align-items: center; padding: 3px 3px 3px 12px;
+            box-shadow: 0 0 10px rgba(255, 60, 0, 0.4);
+        }
+        .lang-text { color: #fff; font-size: 0.75rem; font-weight: bold; letter-spacing: 1px; margin-right: 10px; }
+        .lang-btn {
+            background: transparent; border: none; color: #aaa; font-weight: bold;
+            font-size: 0.8rem; padding: 4px 10px; border-radius: 4px; transition: 0.3s; cursor: pointer;
+        }
+        .lang-btn.active, .lang-btn:hover { background: var(--mac-red); color: #fff; }
+
         .side-panel {
-            background: #fff;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            height: fit-content;
-            position: sticky;
-            top: 20px;
-            border: 1px solid #eee;
+            background: #fff; border-radius: 12px; padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); height: fit-content;
+            position: sticky; top: 20px; border: 1px solid #eee;
         }
-
         .ad-placeholder {
-            background: #e9ecef;
-            border: 2px dashed #ccc;
-            height: 450px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #888;
+            background: #e9ecef; border: 2px dashed #ccc; height: 450px;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; color: #888; border-radius: 8px;
         }
 
-        /* Hesaplayıcı Kartı */
+        @media (max-width: 991px) {
+            .ad-placeholder { height: 90px !important; }
+            .side-panel { position: relative !important; top: 0 !important; }
+            .lang-text { display: none; }
+        }
+
         .calculator-card {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-top: 6px solid var(--mac-red);
+            background: white; border-radius: 20px; padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 6px solid var(--mac-red);
         }
-
+        
+        #infoPage, #macroCalc, #fatCalc { display: none; }
+        
         .btn-calculate {
-            background-color: var(--mac-red);
-            color: white;
-            border: none;
-            padding: 15px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            transition: 0.3s;
+            background-color: var(--mac-red); color: white; border: none;
+            padding: 15px; font-weight: bold; letter-spacing: 1px; transition: 0.3s;
         }
-        .btn-calculate:hover {
-            background-color: #cc3000;
-            transform: scale(1.02);
-        }
-
-        /* Süslü Motivasyon Sözü */
-        .motivation-quote {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.6rem;
-            color: var(--mac-red);
-            text-align: center;
-            margin: 20px 0;
-            line-height: 1.3;
-        }
-
-        .contact-box {
-            background: #f1f1f1;
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            word-break: break-all;
-        }
-
-        .sister-site {
-            text-decoration: none;
-            color: #0d6efd;
-            font-weight: 600;
-            transition: 0.2s;
-        }
-        .sister-site:hover {
-            color: var(--mac-red);
-            text-decoration: underline;
-        }
-
-        #resultArea { display: none; }
+        .btn-calculate:hover { background-color: #cc3000; transform: scale(1.02); }
+        .motivation-quote { font-family: 'Dancing Script', cursive; font-size: 1.6rem; color: var(--mac-red); text-align: center; margin: 20px 0; line-height: 1.3; }
+        .contact-box { background: #f1f1f1; padding: 10px; border-radius: 8px; font-size: 0.85rem; word-break: break-all; }
+        .sister-site { text-decoration: none; color: #0d6efd; font-weight: 600; transition: 0.2s; }
+        .sister-site:hover { color: var(--mac-red); text-decoration: underline; }
+        .result-box { display: none; margin-top: 25px; padding-top: 20px; border-top: 1px solid #eee; }
     </style>
 </head>
-<body>
+<body onload="setLanguage('tr')">
 
-<nav class="navbar navbar-dark bg-dark mb-4">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
     <div class="container">
-        <span class="navbar-brand mb-0 h1">Mets<span style="color: var(--mac-red);">CAL</span></span>
+        <a class="navbar-brand mb-0 h1 fs-3" href="javascript:void(0)" onclick="showPage('main')">
+            Mets<span style="color: var(--mac-red);">CAL</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav gap-lg-4 text-center">
+                <li class="nav-item"><a href="javascript:void(0)" class="nav-link-custom" id="t-navAbout" onclick="showInfo('about')">HAKKIMIZDA</a></li>
+                <li class="nav-item"><a href="javascript:void(0)" class="nav-link-custom" id="t-navPrivacy" onclick="showInfo('privacy')">GİZLİLİK</a></li>
+                <li class="nav-item"><a href="javascript:void(0)" class="nav-link-custom" id="t-navContact" onclick="showInfo('contact')">İLETİŞİM</a></li>
+            </ul>
+        </div>
+
+        <div class="lang-box ms-auto">
+            <span class="lang-text" id="t-langText">LANGUAGE</span>
+            <button class="lang-btn" id="btn-tr" onclick="setLanguage('tr')">TR</button>
+            <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+            <button class="lang-btn" id="btn-ru" onclick="setLanguage('ru')">RU</button>
+        </div>
     </div>
 </nav>
 
 <div class="container-fluid px-lg-5">
     <div class="row">
-        
-        <div class="col-lg-2 d-none d-lg-block">
+        <div class="col-lg-2 mb-4 mb-lg-0">
             <div class="side-panel text-center">
-                <h6 class="text-muted mb-3">SPONSORLU</h6>
-                <div class="ad-placeholder">REKLAM ALANI</div>
+                <h6 class="text-muted mb-3" id="t-sponsor">SPONSORLU</h6>
+                <div class="ad-placeholder" id="t-adArea">REKLAM ALANI</div>
             </div>
         </div>
 
         <div class="col-lg-6 col-md-8 mx-auto">
-            <div class="calculator-card">
-                <h2 class="text-center mb-4">Günlük Kalori <span style="color: var(--mac-red);">İhtiyacın</span></h2>
+            <div id="mainCalculator" class="calculator-card">
+                <h2 class="text-center mb-4"><span id="t-title1">Günlük Kalori</span> <span style="color: var(--mac-red);" id="t-title2">İhtiyacın</span></h2>
                 <form id="calorieForm">
                     <div class="row g-3">
                         <div class="col-12">
-                            <label class="form-label fw-bold">Cinsiyet</label>
+                            <label class="form-label fw-bold" id="t-labelGender">Cinsiyet</label>
                             <div class="btn-group w-100">
                                 <input type="radio" class="btn-check" name="gender" id="male" value="male" checked>
-                                <label class="btn btn-outline-danger" for="male">ERKEK</label>
+                                <label class="btn btn-outline-danger" for="male" id="t-male">ERKEK</label>
                                 <input type="radio" class="btn-check" name="gender" id="female" value="female">
-                                <label class="btn btn-outline-danger" for="female">KADIN</label>
+                                <label class="btn btn-outline-danger" for="female" id="t-female">KADIN</label>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <label class="form-label">Yaş</label>
-                            <input type="number" class="form-control" id="age" placeholder="25">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label">Boy (cm)</label>
-                            <input type="number" class="form-control" id="height" placeholder="180">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label">Kilo (kg)</label>
-                            <input type="number" class="form-control" id="weight" placeholder="75">
-                        </div>
+                        <div class="col-md-4"><label class="form-label" id="t-age">Yaş</label><input type="number" class="form-control" id="age" placeholder="25"></div>
+                        <div class="col-md-4"><label class="form-label" id="t-height">Boy (cm)</label><input type="number" class="form-control" id="height" placeholder="180"></div>
+                        <div class="col-md-4"><label class="form-label" id="t-weight">Kilo (kg)</label><input type="number" class="form-control" id="weight" placeholder="75"></div>
                         <div class="col-12 mt-3">
-                            <label class="form-label">Hareket Seviyesi</label>
+                            <label class="form-label" id="t-labelActivity">Hareket Seviyesi</label>
                             <select class="form-select" id="activity">
-                                <option value="1.2">Hareketsiz (Masa başı)</option>
-                                <option value="1.375">Hafif (Haftada 1-2 spor)</option>
-                                <option value="1.55">Orta (Haftada 3-5 spor)</option>
-                                <option value="1.725">Yüksek (Haftada 6-7 spor)</option>
+                                <option value="1.2" id="t-act1">Hareketsiz (Masa başı)</option>
+                                <option value="1.375" id="t-act2">Hafif (Haftada 1-2 spor)</option>
+                                <option value="1.55" id="t-act3">Orta (Haftada 3-5 spor)</option>
+                                <option value="1.725" id="t-act4">Yüksek (Haftada 6-7 spor)</option>
                             </select>
                         </div>
                         <div class="col-12 mt-4">
-                            <label class="form-label">Hedefin Nedir?</label>
+                            <label class="form-label" id="t-labelGoal">Hedefin Nedir?</label>
                             <div class="row g-2">
-                                <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g1" value="lose" checked><label class="btn btn-outline-dark w-100 py-3" for="g1">📉 Kilo Ver</label></div>
-                                <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g2" value="maintain"><label class="btn btn-outline-dark w-100 py-3" for="g2">⚖️ Koru</label></div>
-                                <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g3" value="gain"><label class="btn btn-outline-dark w-100 py-3" for="g3">🍔 Kilo Al</label></div>
-                                <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g4" value="muscle"><label class="btn btn-outline-dark w-100 py-3" for="g4">💪 Kas Yap</label></div>
+                                <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g1" value="lose" checked><label class="btn btn-outline-dark w-100 py-3" for="g1" id="t-goal1">📉 Kilo Ver</label></div>
+                                <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g2" value="maintain"><label class="btn btn-outline-dark w-100 py-3" for="g2" id="t-goal2">⚖️ Koru</label></div>
+                                <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g3" value="gain"><label class="btn btn-outline-dark w-100 py-3" for="g3" id="t-goal3">🍔 Kilo Al</label></div>
+                                <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g4" value="muscle"><label class="btn btn-outline-dark w-100 py-3" for="g4" id="t-goal4">💪 Kas Yap</label></div>
                             </div>
                         </div>
-                        <div class="col-12 mt-4">
-                            <button type="button" onclick="calculate()" class="btn btn-calculate w-100">HESAPLA</button>
-                        </div>
+                        <div class="col-12 mt-4"><button type="button" onclick="calculateCalorie()" class="btn btn-calculate w-100" id="t-btnCalc">HESAPLA</button></div>
                     </div>
                 </form>
-
-                <div id="resultArea" class="mt-5 text-center border-top pt-4">
-                    <h4 id="resTitle" class="mb-0"></h4>
+                <div id="resultArea" class="result-box text-center">
+                    <h4 id="resTitle"></h4>
                     <div class="display-3 fw-bold text-danger" id="calResult">0</div>
                     <div class="alert alert-info mt-3" id="resAdvice"></div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-lg-4 d-none d-lg-block">
-            <div class="side-panel">
-                <div class="motivation-quote">
-                    "Acı geçicidir, ama zafer sonsuzdur!"
+            <div id="macroCalc" class="calculator-card">
+                <button class="btn btn-sm btn-outline-dark mb-3" onclick="showPage('main')"><span id="t-btnBack1">← Geri Dön</span></button>
+                <h2 class="text-center mb-4" id="t-tool1Title">🍗 Makro Hesaplama</h2>
+                <div class="row g-3">
+                    <div class="col-12"><label class="form-label" id="t-macroDaily">Günlük Hedef Kalorin</label><input type="number" id="macroCalInput" class="form-control" placeholder="2500"></div>
+                    <div class="col-12 mt-3"><button onclick="calculateMacros()" class="btn btn-calculate w-100" id="t-btnCalcMacro">MAKROLARI BUL</button></div>
                 </div>
-                
-                <hr>
-
-                <h6 class="fw-bold mb-2">🔗 KARDEŞ PROJEMİZ</h6>
-                <p class="small">LGS'ye hazırlanan dostlarımız için:</p>
-                <a href="https://lgspuanhesaplama.github.io/lgspuanhesaplama/" target="_blank" class="sister-site d-block mb-3">
-                    🚀 LGS Puan Hesaplama Sistemi
-                </a>
-
-                <hr>
-
-                <h6 class="fw-bold"><i class="bi bi-info-circle"></i> PRATİK BİLGİ</h6>
-                <p class="small text-muted">Vücut ağırlığının her 1 kilosu için yaklaşık 30-35 ml su içmeyi ihmal etme. Su, yağ yakımını %30 hızlandırır.</p>
-                
-                <hr>
-
-                <h6 class="fw-bold text-uppercase">📩 İŞ BİRLİĞİ & REKLAM</h6>
-                <p class="small mb-2">Sitemizde yer almak veya sponsorluk için:</p>
-                <div class="contact-box">
-                    <strong>Email:</strong> <a href="mailto:motivetate7@gmail.com" style="text-decoration:none; color:inherit;">motivetate7@gmail.com</a>
+                <div id="macroResult" class="result-box">
+                    <div class="row text-center g-2">
+                        <div class="col-4"><div class="p-2 border rounded"><strong>PRO</strong><br><span id="resPro" class="text-danger">0</span>g</div></div>
+                        <div class="col-4"><div class="p-2 border rounded"><strong>KARB</strong><br><span id="resCarb" class="text-danger">0</span>g</div></div>
+                        <div class="col-4"><div class="p-2 border rounded"><strong>YAĞ</strong><br><span id="resFat" class="text-danger">0</span>g</div></div>
+                    </div>
                 </div>
+            </div>
+
+            <div id="fatCalc" class="calculator-card">
+                <button class="btn btn-sm btn-outline-dark mb-3" onclick="showPage('main')"><span id="t-btnBack2">← Geri Dön</span></button>
+                <h2 class="text-center mb-4" id="t-tool2Title">⚖️ Vücut Yağ Oranı</h2>
+                <div class="row g-3">
+                    <div class="col-6"><label class="form-label" id="t-neck">Boyun Çevresi (cm)</label><input type="number" id="neck" class="form-control" placeholder="40"></div>
+                    <div class="col-6"><label class="form-label" id="t-waist">Bel Çevresi (cm)</label><input type="number" id="waist" class="form-control" placeholder="90"></div>
+                    <div class="col-12 mt-3"><button onclick="calculateFat()" class="btn btn-calculate w-100" id="t-btnCalcFat">HESAPLA</button></div>
+                </div>
+                <div id="fatResult" class="result-box text-center">
+                    <h4 id="t-fatResTitle">Tahmini Yağ Oranı:</h4>
+                    <div class="display-3 fw-bold text-danger" id="resFatPerc">%0</div>
+                </div>
+            </div>
+
+            <div id="infoPage" class="calculator-card">
+                <button class="btn btn-sm btn-outline-dark mb-4" onclick="showPage('main')"><span id="t-btnBack3">← Geri Dön</span></button>
+                <div id="infoContent"></div>
             </div>
         </div>
 
+        <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="side-panel">
+                <div class="motivation-quote" id="t-quote">"Acı geçicidir, ama zafer sonsuzdur!"</div>
+                <hr>
+                <h6 class="fw-bold mb-2" id="t-sisterTitle">🔗 KARDEŞ PROJEMİZ</h6>
+                <p class="small" id="t-sisterDesc">LGS'ye hazırlanan dostlarımız için:</p>
+                <a href="https://lgspuanhesaplama.github.io/lgspuanhesaplama/" target="_blank" class="sister-site d-block mb-3" id="t-sisterLink">🚀 LGS Puan Hesaplama Sistemi</a>
+                <hr>
+                <h6 class="fw-bold" id="t-infoTitle">PRATİK BİLGİ</h6>
+                <p class="small text-muted" id="t-infoDesc">Vücut ağırlığının her 1 kilosu için yaklaşık 30-35 ml su içmeyi ihmal etme.</p>
+                <hr>
+                <h6 class="fw-bold text-uppercase" id="t-contactTitle">📩 İŞ BİRLİĞİ</h6>
+                <p class="small mb-2" id="t-contactDesc">Sitemizde yer almak için:</p>
+                <div class="contact-box"><strong>Email:</strong> motivetate7@gmail.com</div>
+                <hr>
+                <h6 class="fw-bold text-uppercase mt-3 mb-3" id="t-otherTools">⚙️ DİĞER ARAÇLAR</h6>
+                <div class="d-grid gap-2">
+                    <button onclick="showPage('macro')" class="btn btn-outline-danger btn-sm text-start fw-bold" id="t-tool1">🍗 Makro Hesaplama</button>
+                    <button onclick="showPage('fat')" class="btn btn-outline-danger btn-sm text-start fw-bold" id="t-tool2">⚖️ Vücut Yağ Oranı Hesaplama</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <footer class="text-center py-5 text-muted">
-    <p>&copy; 2026 MetsCal | Tüm Sporculara Başarılar!</p>
+    <p>&copy; 2026 MetsCal | <span id="t-footer">Tüm Sporculara Başarılar!</span></p>
 </footer>
 
 <script>
-    function calculate() {
+    const translations = {
+        tr: {
+            navAbout: "HAKKIMIZDA", navPrivacy: "GİZLİLİK", navContact: "İLETİŞİM", btnBack1: "← Geri Dön", btnBack2: "← Geri Dön", btnBack3: "← Geri Dön",
+            langText: "DİL", sponsor: "SPONSORLU", adArea: "REKLAM ALANI", title1: "Günlük Kalori", title2: "İhtiyacın",
+            labelGender: "Cinsiyet", male: "ERKEK", female: "KADIN", age: "Yaş", height: "Boy (cm)", weight: "Kilo (kg)",
+            labelActivity: "Hareket Seviyesi", act1: "Hareketsiz (Masa başı)", act2: "Hafif (Haftada 1-2 spor)", 
+            act3: "Orta (Haftada 3-5 spor)", act4: "Yüksek (Haftada 6-7 spor)", labelGoal: "Hedefin Nedir?",
+            goal1: "📉 Kilo Ver", goal2: "⚖️ Koru", goal3: "🍔 Kilo Al", goal4: "💪 Kas Yap", btnCalc: "HESAPLA",
+            quote: '"Acı geçicidir, ama zafer sonsuzdur!"', sisterTitle: "🔗 KARDEŞ PROJEMİZ", sisterDesc: "LGS'ye hazırlanan dostlarımız için:",
+            sisterLink: "🚀 LGS Puan Hesaplama Sistemi", infoTitle: "PRATİK BİLGİ", infoDesc: "Vücut ağırlığının her 1 kilosu için yaklaşık 30-35 ml su içmeyi ihmal etme.",
+            contactTitle: "📩 İŞ BİRLİĞİ", contactDesc: "Sitemizde yer almak için:", otherTools: "⚙️ DİĞER ARAÇLAR",
+            tool1: "🍗 Makro Hesaplama", tool2: "⚖️ Vücut Yağ Oranı Hesaplama", footer: "Tüm Sporculara Başarılar!",
+            alertFill: "Lütfen tüm alanları doldur!", resLose: "Kilo Verme", resMaintain: "Koru", resGain: "Kilo Alma", resMuscle: "Kas Yapma",
+            adv1: "Günlük 500 kalori açıkla sağlıklı zayıfla.", adv2: "Formunu korumak için ideal denge.", adv3: "Sağlıklı karbonhidratlarla hacim kazan.", adv4: "Protein ağırlıklı beslenerek temiz kas inşa et.",
+            tool1Title: "🍗 Makro Hesaplama", macroDaily: "Günlük Hedef Kalorin", btnCalcMacro: "MAKROLARI BUL",
+            tool2Title: "⚖️ Vücut Yağ Oranı", neck: "Boyun Çevresi (cm)", waist: "Bel Çevresi (cm)", btnCalcFat: "HESAPLA", fatResTitle: "Tahmini Yağ Oranı:",
+            txtAbout: "MetsCAL, sporcular için geliştirilmiş hepsi bir arada hesaplama platformudur.",
+            txtPrivacy: "Verileriniz kaydedilmez.", txtContact: "Bize ulaşın: motivetate7@gmail.com"
+        },
+        en: {
+            navAbout: "ABOUT US", navPrivacy: "PRIVACY", navContact: "CONTACT", btnBack1: "← Back", btnBack2: "← Back", btnBack3: "← Back",
+            langText: "LANGUAGE", sponsor: "SPONSORED", adArea: "AD SPACE", title1: "Daily Calorie", title2: "Needs",
+            labelGender: "Gender", male: "MALE", female: "FEMALE", age: "Age", height: "Height (cm)", weight: "Weight (kg)",
+            labelActivity: "Activity Level", act1: "Sedentary", act2: "Light (1-2 days)", act3: "Moderate (3-5 days)", act4: "High (6-7 days)", 
+            labelGoal: "What is your goal?", goal1: "📉 Lose Weight", goal2: "⚖️ Maintain", goal3: "🍔 Gain Weight", goal4: "💪 Build Muscle", btnCalc: "CALCULATE",
+            quote: '"Pain is temporary, pride is forever!"', sisterTitle: "🔗 SISTER PROJECT", sisterDesc: "For LGS students:", sisterLink: "🚀 LGS Score Calc",
+            infoTitle: "PRACTICAL INFO", infoDesc: "Drink 30-35 ml of water per kg of weight.", contactTitle: "📩 CONTACT", contactDesc: "To partner with us:",
+            otherTools: "⚙️ OTHER TOOLS", tool1: "🍗 Macro Calculator", tool2: "⚖️ Body Fat Calculator", footer: "Good luck athletes!",
+            alertFill: "Fill all fields!", resLose: "Weight Loss", resMaintain: "Maintain", resGain: "Gain Weight", resMuscle: "Muscle Building",
+            adv1: "Lose weight with a 500 kcal deficit.", adv2: "Perfect balance.", adv3: "Gain volume with carbs.", adv4: "High protein for lean muscle.",
+            tool1Title: "🍗 Macro Calculator", macroDaily: "Your Daily Calorie Goal", btnCalcMacro: "FIND MACROS",
+            tool2Title: "⚖️ Body Fat %", neck: "Neck Circ (cm)", waist: "Waist Circ (cm)", btnCalcFat: "CALCULATE", fatResTitle: "Estimated Fat %:",
+            txtAbout: "MetsCAL is an all-in-one calculation platform for athletes.", txtPrivacy: "We do not store data.", txtContact: "Contact: motivetate7@gmail.com"
+        },
+        ru: {
+            navAbout: "О НАС", navPrivacy: "ПОЛИТИКА", navContact: "КОНТАКТЫ", btnBack1: "← Назад", btnBack2: "← Назад", btnBack3: "← Назад",
+            langText: "ЯЗЫК", sponsor: "СПОНСОР", adArea: "РЕКЛАМА", title1: "Дневная норма", title2: "калорий",
+            labelGender: "Пол", male: "МУЖЧИНА", female: "ЖЕНЩИНА", age: "Возраст", height: "Рост (см)", weight: "Вес (кг)",
+            labelActivity: "Активность", act1: "Сидячий", act2: "Легкий", act3: "Средний", act4: "Высокий", 
+            labelGoal: "Цель?", goal1: "📉 Похудеть", goal2: "⚖️ Вес", goal3: "🍔 Набрать", goal4: "💪 Мышцы", btnCalc: "РАССЧИТАТЬ",
+            quote: '"Боль временна, триумф вечен!"', sisterTitle: "🔗 ПРОЕКТ", sisterDesc: "Для LGS:", sisterLink: "🚀 LGS Расчет",
+            infoTitle: "ИНФО", infoDesc: "Пейте 30-35 мл воды на кг веса.", contactTitle: "📩 РЕКЛАМА", contactDesc: "Сотрудничество:",
+            otherTools: "⚙️ ИНСТРУМЕНТЫ", tool1: "🍗 Макронутриенты", tool2: "⚖️ Процент жира", footer: "Успехов всем!",
+            alertFill: "Заполните поля!", resLose: "Похудение", resMaintain: "Поддержка", resGain: "Набор", resMuscle: "Набор мышц",
+            adv1: "Дефицит 500 калорий.", adv2: "Идеальный баланс.", adv3: "Набирайте массу углеводами.", adv4: "Белок для мышц.",
+            tool1Title: "🍗 Макросы", macroDaily: "Ваша цель калорий", btnCalcMacro: "РАССЧИТАТЬ",
+            tool2Title: "⚖️ % Жира", neck: "Шея (см)", waist: "Талия (см)", btnCalcFat: "РАССЧИТАТЬ", fatResTitle: "Процент жира:",
+            txtAbout: "MetsCAL - универсальная платформа для спортсменов.", txtPrivacy: "Данные не сохраняются.", txtContact: "Email: motivetate7@gmail.com"
+        }
+    };
+
+    let currentLang = 'tr';
+    let currentInfoType = null;
+
+    function showPage(pageId) {
+        // Tüm sayfaları gizle
+        document.getElementById('mainCalculator').style.display = 'none';
+        document.getElementById('infoPage').style.display = 'none';
+        document.getElementById('macroCalc').style.display = 'none';
+        document.getElementById('fatCalc').style.display = 'none';
+        
+        // Sonuç alanlarını temizle
+        document.getElementById('resultArea').style.display = 'none';
+        document.getElementById('macroResult').style.display = 'none';
+        document.getElementById('fatResult').style.display = 'none';
+
+        if(pageId === 'main') document.getElementById('mainCalculator').style.display = 'block';
+        else if(pageId === 'macro') document.getElementById('macroCalc').style.display = 'block';
+        else if(pageId === 'fat') document.getElementById('fatCalc').style.display = 'block';
+    }
+
+    function showInfo(type) {
+        currentInfoType = type;
+        showPage('none'); // Hepsini gizle
+        document.getElementById('infoPage').style.display = 'block';
+        updateInfoContent();
+    }
+
+    function updateInfoContent() {
+        if (!currentInfoType) return;
+        const content = document.getElementById('infoContent');
+        const l = translations[currentLang];
+        if(currentInfoType === 'about') content.innerHTML = `<h3>${l.navAbout}</h3><p>${l.txtAbout}</p>`;
+        else if(currentInfoType === 'privacy') content.innerHTML = `<h3>${l.navPrivacy}</h3><p>${l.txtPrivacy}</p>`;
+        else if(currentInfoType === 'contact') content.innerHTML = `<h3>${l.navContact}</h3><p>${l.txtContact}</p>`;
+    }
+
+    function setLanguage(lang) {
+        currentLang = lang;
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        document.getElementById('btn-' + lang).classList.add('active');
+        for (let key in translations[lang]) {
+            let el = document.getElementById('t-' + key);
+            if (el) el.innerText = translations[lang][key];
+        }
+        updateInfoContent();
+    }
+
+    // --- HESAPLAMA MANTIKLARI ---
+    
+    function calculateCalorie() {
         const age = parseInt(document.getElementById('age').value);
         const weight = parseInt(document.getElementById('weight').value);
         const height = parseInt(document.getElementById('height').value);
@@ -216,22 +322,47 @@
         const gender = document.querySelector('input[name="gender"]:checked').value;
         const goal = document.querySelector('input[name="goal"]:checked').value;
 
-        if (!age || !weight || !height) { alert("Lütfen tüm alanları doldur!"); return; }
+        if (!age || !weight || !height) { alert(translations[currentLang].alertFill); return; }
 
         let bmr = (10 * weight) + (6.25 * height) - (5 * age);
         bmr = (gender === 'male') ? bmr + 5 : bmr - 161;
         const maintenance = bmr * activity;
 
-        let final = 0, title = "", advice = "";
-        if(goal === 'lose') { final = maintenance - 500; title = "Kilo Verme"; advice = "Günlük 500 kalori açıkla sağlıklı zayıfla."; }
-        else if(goal === 'maintain') { final = maintenance; title = "Koru"; advice = "Formunu korumak için ideal denge."; }
-        else if(goal === 'gain') { final = maintenance + 400; title = "Kilo Alma"; advice = "Sağlıklı karbonhidratlarla hacim kazan."; }
-        else { final = maintenance + 250; title = "Kas Yapma"; advice = "Protein ağırlıklı beslenerek temiz kas inşa et."; }
+        let final = 0, titleKey = "", advKey = "";
+        if(goal === 'lose') { final = maintenance - 500; titleKey = "resLose"; advKey = "adv1"; }
+        else if(goal === 'maintain') { final = maintenance; titleKey = "resMaintain"; advKey = "adv2"; }
+        else if(goal === 'gain') { final = maintenance + 400; titleKey = "resGain"; advKey = "adv3"; }
+        else { final = maintenance + 250; titleKey = "resMuscle"; advKey = "adv4"; }
 
         document.getElementById('calResult').innerText = Math.round(final) + " kcal";
-        document.getElementById('resTitle').innerText = title;
-        document.getElementById('resAdvice').innerText = advice;
+        document.getElementById('resTitle').innerText = translations[currentLang][titleKey];
+        document.getElementById('resAdvice').innerText = translations[currentLang][advKey];
         document.getElementById('resultArea').style.display = 'block';
+    }
+
+    function calculateMacros() {
+        const cal = parseInt(document.getElementById('macroCalInput').value);
+        if(!cal) { alert(translations[currentLang].alertFill); return; }
+        
+        // Standart %30 Pro, %45 Karb, %25 Yağ
+        document.getElementById('resPro').innerText = Math.round((cal * 0.30) / 4);
+        document.getElementById('resCarb').innerText = Math.round((cal * 0.45) / 4);
+        document.getElementById('resFat').innerText = Math.round((cal * 0.25) / 9);
+        document.getElementById('macroResult').style.display = 'block';
+    }
+
+    function calculateFat() {
+        const n = parseFloat(document.getElementById('neck').value);
+        const w = parseFloat(document.getElementById('waist').value);
+        const h = parseFloat(document.getElementById('height').value) || 170; // Boy yoksa standart
+        
+        if(!n || !w) { alert(translations[currentLang].alertFill); return; }
+        
+        // Basit Navy Formula yaklaşımı
+        let fat = 495 / (1.0324 - 0.19077 * Math.log10(w - n) + 0.15456 * Math.log10(h)) - 450;
+        if(fat < 2) fat = 5;
+        document.getElementById('resFatPerc').innerText = "%" + Math.round(fat);
+        document.getElementById('fatResult').style.display = 'block';
     }
 </script>
 </body>
