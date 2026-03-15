@@ -11,47 +11,17 @@
         :root { --mac-red: #ff3c00; --mac-dark: #1a1a1a; }
         body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; }
         h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
-
-        .nav-link-custom {
-            color: #ccc !important; font-weight: 600; font-size: 0.85rem; 
-            transition: 0.3s; letter-spacing: 0.5px; text-decoration: none;
-        }
+        .nav-link-custom { color: #ccc !important; font-weight: 600; font-size: 0.85rem; transition: 0.3s; letter-spacing: 0.5px; text-decoration: none; cursor: pointer; }
         .nav-link-custom:hover { color: var(--mac-red) !important; transform: translateY(-2px); }
-
-        .lang-box {
-            background: #000; border: 1px solid var(--mac-red); border-radius: 6px;
-            display: flex; align-items: center; padding: 3px 3px 3px 12px;
-            box-shadow: 0 0 10px rgba(255, 60, 0, 0.4);
-        }
+        .lang-box { background: #000; border: 1px solid var(--mac-red); border-radius: 6px; display: flex; align-items: center; padding: 3px 3px 3px 12px; box-shadow: 0 0 10px rgba(255, 60, 0, 0.4); }
         .lang-text { color: #fff; font-size: 0.75rem; font-weight: bold; letter-spacing: 1px; margin-right: 10px; }
-        .lang-btn {
-            background: transparent; border: none; color: #aaa; font-weight: bold;
-            font-size: 0.8rem; padding: 4px 10px; border-radius: 4px; transition: 0.3s; cursor: pointer;
-        }
+        .lang-btn { background: transparent; border: none; color: #aaa; font-weight: bold; font-size: 0.8rem; padding: 4px 10px; border-radius: 4px; transition: 0.3s; cursor: pointer; }
         .lang-btn.active, .lang-btn:hover { background: var(--mac-red); color: #fff; }
-
-        .side-panel {
-            background: #fff; border-radius: 12px; padding: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); height: fit-content;
-            position: sticky; top: 20px; border: 1px solid #eee;
-        }
-
-        @media (max-width: 991px) {
-            .side-panel { position: relative !important; top: 0 !important; }
-            .lang-text { display: none; }
-        }
-
-        .calculator-card {
-            background: white; border-radius: 20px; padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 6px solid var(--mac-red);
-        }
-        
+        .side-panel { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); height: fit-content; position: sticky; top: 20px; border: 1px solid #eee; }
+        @media (max-width: 991px) { .side-panel { position: relative !important; top: 0 !important; } .lang-text { display: none; } }
+        .calculator-card { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 6px solid var(--mac-red); }
         #infoPage, #macroCalc, #fatCalc { display: none; }
-        
-        .btn-calculate {
-            background-color: var(--mac-red); color: white; border: none;
-            padding: 15px; font-weight: bold; letter-spacing: 1px; transition: 0.3s;
-        }
+        .btn-calculate { background-color: var(--mac-red); color: white; border: none; padding: 15px; font-weight: bold; letter-spacing: 1px; transition: 0.3s; }
         .btn-calculate:hover { background-color: #cc3000; transform: scale(1.02); }
         .motivation-quote { font-family: 'Dancing Script', cursive; font-size: 1.6rem; color: var(--mac-red); text-align: center; margin: 20px 0; line-height: 1.3; }
         .contact-box { background: #f1f1f1; padding: 10px; border-radius: 8px; font-size: 0.85rem; word-break: break-all; }
@@ -67,19 +37,16 @@
         <a class="navbar-brand mb-0 h1 fs-3" href="javascript:void(0)" onclick="showPage('main')">
             Mets<span style="color: var(--mac-red);">CAL</span>
         </a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav gap-lg-4 text-center">
-                <li class="nav-item"><a href="javascript:void(0)" class="nav-link-custom" id="t-navAbout" onclick="showInfo('about')">HAKKIMIZDA</a></li>
-                <li class="nav-item"><a href="javascript:void(0)" class="nav-link-custom" id="t-navPrivacy" onclick="showInfo('privacy')">GİZLİLİK</a></li>
-                <li class="nav-item"><a href="javascript:void(0)" class="nav-link-custom" id="t-navContact" onclick="showInfo('contact')">İLETİŞİM</a></li>
+                <li class="nav-item"><a class="nav-link-custom" id="t-navAbout" onclick="showInfo('about')">HAKKIMIZDA</a></li>
+                <li class="nav-item"><a class="nav-link-custom" id="t-navPrivacy" onclick="showInfo('privacy')">GİZLİLİK</a></li>
+                <li class="nav-item"><a class="nav-link-custom" id="t-navContact" onclick="showInfo('contact')">İLETİŞİM</a></li>
             </ul>
         </div>
-
         <div class="lang-box ms-auto">
             <span class="lang-text" id="t-langText">LANGUAGE</span>
             <button class="lang-btn" id="btn-tr" onclick="setLanguage('tr')">TR</button>
@@ -94,15 +61,13 @@
         <div class="col-lg-2 mb-4 mb-lg-0">
             <div class="side-panel text-center">
                 <h6 class="text-muted mb-3" id="t-sponsor">SPONSORLU</h6>
-                
                 <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
-                  <iframe data-aa='2430424' src='//acceptable.a-ads.com/2430424/?size=Adaptive'
-                                          style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+                  <iframe data-aa='2430424' src='//acceptable.a-ads.com/2430424/?size=Adaptive' style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
                   <div style="width: 70%;margin:auto;position: absolute;left: 0;right: 0">
                     <a target="_blank" style="display:inline-block;font-size: 13px;color: #263238;padding: 4px 10px;background: #F8F8F9;text-decoration: none; border-radius: 0 0 4px 4px;" id="frame-link" href="https://aads.com/campaigns/new/?source_id=2430424&source_type=ad_unit&partner=2430424">Advertise here</a>
                   </div>
                 </div>
-                </div>
+            </div>
         </div>
 
         <div class="col-lg-6 col-md-8 mx-auto">
@@ -216,9 +181,81 @@
 </footer>
 
 <script>
-    const translations = { /* Aynı translation objesi */ };
+    const translations = {
+        tr: {
+            navAbout:"HAKKIMIZDA", navPrivacy:"GİZLİLİK", navContact:"İLETİŞİM", langText:"LANGUAGE",
+            sponsor:"SPONSORLU", title1:"Günlük Kalori", title2:"İhtiyacın", labelGender:"Cinsiyet",
+            male:"ERKEK", female:"KADIN", age:"Yaş", height:"Boy (cm)", weight:"Kilo (kg)",
+            labelActivity:"Hareket Seviyesi", act1:"Hareketsiz (Masa başı)", act2:"Hafif (Haftada 1-2 spor)",
+            act3:"Orta (Haftada 3-5 spor)", act4:"Yüksek (Haftada 6-7 spor)", labelGoal:"Hedefin Nedir?",
+            goal1:"📉 Kilo Ver", goal2:"⚖️ Koru", goal3:"🍔 Kilo Al", goal4:"💪 Kas Yap",
+            btnCalc:"HESAPLA", tool1Title:"🍗 Makro Hesaplama", macroDaily:"Günlük Hedef Kalorin",
+            btnCalcMacro:"MAKROLARI BUL", tool2Title:"⚖️ Vücut Yağ Oranı", neck:"Boyun Çevresi (cm)",
+            waist:"Bel Çevresi (cm)", btnCalcFat:"HESAPLA", fatResTitle:"Tahmini Yağ Oranı:",
+            btnBack1:"← Geri Dön", btnBack2:"← Geri Dön", btnBack3:"← Geri Dön",
+            quote:'"Acı geçicidir, ama zafer sonsuzdur!"', sisterTitle:"🔗 KARDEŞ PROJEMİZ",
+            sisterDesc:"LGS'ye hazırlanan dostlarımız için:", sisterLink:"🚀 LGS Puan Hesaplama Sistemi",
+            infoTitle:"PRATİK BİLGİ", infoDesc:"Vücut ağırlığının her 1 kilosu için yaklaşık 30-35 ml su içmeyi ihmal etme.",
+            contactTitle:"📩 İŞ BİRLİĞİ", contactDesc:"Sitemizde yer almak için:", otherTools:"⚙️ DİĞER ARAÇLAR",
+            tool1:"🍗 Makro Hesaplama", tool2:"⚖️ Vücut Yağ Oranı Hesaplama", footer:"Tüm Sporculara Başarılar!",
+            alertFill:"Lütfen tüm alanları doldur!", resLose:"Kilo Vermek İçin:", resMaintain:"Kilonu Korumak İçin:",
+            resGain:"Kilo Almak İçin:", resMuscle:"Kas Yapmak İçin:", adv1:"Sağlıklı bir kalori açığı.", adv2:"Formunu korumak için ideal.",
+            adv3:"Kas kütlesi için temiz beslen.", adv4: "Proteini yüksek tutmayı unutma!",
+            txtAbout: "MetsCal, sporcular için geliştirilmiş profesyonel bir hesaplama aracıdır.",
+            txtPrivacy: "Verileriniz gizlidir ve hiçbir şekilde sunucularımızda saklanmaz.",
+            txtContact: "İş birliği için motivetate7@gmail.com adresinden ulaşabilirsiniz."
+        },
+        en: {
+            navAbout:"ABOUT", navPrivacy:"PRIVACY", navContact:"CONTACT", langText:"LANGUAGE",
+            sponsor:"SPONSORED", title1:"Daily Calorie", title2:"Needs", labelGender:"Gender",
+            male:"MALE", female:"FEMALE", age:"Age", height:"Height (cm)", weight:"Weight (kg)",
+            labelActivity:"Activity Level", act1:"Sedentary", act2:"Lightly Active",
+            act3:"Moderately Active", act4:"Very Active", labelGoal:"What is your goal?",
+            goal1:"📉 Lose Weight", goal2:"⚖️ Maintain", goal3:"🍔 Gain Weight", goal4:"💪 Build Muscle",
+            btnCalc:"CALCULATE", tool1Title:"🍗 Macro Calculator", macroDaily:"Daily Calorie Goal",
+            btnCalcMacro:"FIND MACROS", tool2Title:"⚖️ Body Fat Percentage", neck:"Neck (cm)",
+            waist:"Waist (cm)", btnCalcFat:"CALCULATE", fatResTitle:"Estimated Fat %:",
+            btnBack1:"← Go Back", btnBack2:"← Go Back", btnBack3:"← Go Back",
+            quote:'"Pain is temporary, pride is forever!"', sisterTitle:"🔗 SISTER PROJECT",
+            sisterDesc:"For friends preparing for LGS:", sisterLink:"🚀 LGS Score Calculator",
+            infoTitle:"PRACTICAL INFO", infoDesc:"Drink 30-35 ml of water for every kg of body weight.",
+            contactTitle:"📩 COOPERATION", contactDesc:"To be featured on our site:", otherTools:"⚙️ OTHER TOOLS",
+            tool1:"🍗 Macro Calculation", tool2:"⚖️ Body Fat Calculation", footer:"Good Luck to All Athletes!",
+            alertFill:"Please fill all fields!", resLose:"To Lose Weight:", resMaintain:"To Maintain Weight:",
+            resGain:"To Gain Weight:", resMuscle:"To Build Muscle:", adv1:"A healthy calorie deficit.", adv2:"Perfect for staying in shape.",
+            adv3:"Eat clean for mass.", adv4: "Don't forget to keep protein high!",
+            txtAbout: "MetsCal is a professional tool designed for athletes to reach their goals.",
+            txtPrivacy: "Your data is private and is not stored on our servers.",
+            txtContact: "Contact us at motivetate7@gmail.com for cooperation."
+        },
+        ru: {
+            navAbout:"О НАС", navPrivacy:"ПРИВАТНОСТЬ", navContact:"КОНТАКТЫ", langText:"ЯЗЫК",
+            sponsor:"СПОНСОР", title1:"Дневные", title2:"Калории", labelGender:"Пол",
+            male:"МУЖЧИНА", female:"ЖЕНЩИНА", age:"Возраст", height:"Рост (см)", weight:"Вес (кг)",
+            labelActivity:"Активность", act1:"Сидячий", act2:"Легкий",
+            act3:"Средний", act4:"Высокий", labelGoal:"Какая ваша цель?",
+            goal1:"📉 Похудеть", goal2:"⚖️ Удержать", goal3:"🍔 Набрать", goal4:"💪 Мышцы",
+            btnCalc:"РАССЧИТАТЬ", tool1Title:"🍗 Расчет Макросов", macroDaily:"Цель калорий",
+            btnCalcMacro:"РАССЧИТАТЬ", tool2Title:"⚖️ Процент жира", neck:"Шея (см)",
+            waist:"Талия (см)", btnCalcFat:"РАССЧИТАТЬ", fatResTitle:"Процент жира:",
+            btnBack1:"← Назад", btnBack2:"← Назад", btnBack3:"← Назад",
+            quote:'"Боль временна, триумф вечен!"', sisterTitle:"🔗 НАШ ПРОЕКТ",
+            sisterDesc:"Для подготовки к LGS:", sisterLink:"🚀 Калькулятор баллов LGS",
+            infoTitle:"ИНФО", infoDesc:"Пейте 30-35 мл воды на каждый кг веса.",
+            contactTitle:"📩 СОТРУДНИЧЕСТВО", contactDesc:"Для связи:", otherTools:"⚙️ ИНСТРУМЕНТЫ",
+            tool1:"🍗 Расчет макросов", tool2:"⚖️ Процент жира", footer:"Удачи всем спортсменам!",
+            alertFill:"Заполните все поля!", resLose:"Для похудения:", resMaintain:"Для поддержания:",
+            resGain:"Для набора веса:", resMuscle:"Для мышц:", adv1:"Здоровый дефицит калорий.", adv2:"Идеально для формы.",
+            adv3:"Ешьте чисто для массы.", adv4: "Не забывайте о белке!",
+            txtAbout: "MetsCal - это инструмент для достижения ваших фитнес-целей.",
+            txtPrivacy: "Данные не сохраняются на наших серверах.",
+            txtContact: "Пишите нам на motivetate7@gmail.com."
+        }
+    };
+
     let currentLang = 'tr';
     let currentInfoType = null;
+
     function showPage(pageId) {
         document.getElementById('mainCalculator').style.display = 'none';
         document.getElementById('infoPage').style.display = 'none';
@@ -231,12 +268,75 @@
         else if(pageId === 'macro') document.getElementById('macroCalc').style.display = 'block';
         else if(pageId === 'fat') document.getElementById('fatCalc').style.display = 'block';
     }
-    function showInfo(type) { currentInfoType = type; showPage('none'); document.getElementById('infoPage').style.display = 'block'; updateInfoContent(); }
-    function updateInfoContent() { if (!currentInfoType) return; const content = document.getElementById('infoContent'); const l = translations[currentLang]; if(currentInfoType === 'about') content.innerHTML = `<h3>${l.navAbout}</h3><p>${l.txtAbout}</p>`; else if(currentInfoType === 'privacy') content.innerHTML = `<h3>${l.navPrivacy}</h3><p>${l.txtPrivacy}</p>`; else if(currentInfoType === 'contact') content.innerHTML = `<h3>${l.navContact}</h3><p>${l.txtContact}</p>`; }
-    function setLanguage(lang) { currentLang = lang; document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active')); document.getElementById('btn-' + lang).classList.add('active'); for (let key in translations[lang]) { let el = document.getElementById('t-' + key); if (el) el.innerText = translations[lang][key]; } updateInfoContent(); }
-    function calculateCalorie() { const age = parseInt(document.getElementById('age').value); const weight = parseInt(document.getElementById('weight').value); const height = parseInt(document.getElementById('height').value); const activity = parseFloat(document.getElementById('activity').value); const gender = document.querySelector('input[name="gender"]:checked').value; const goal = document.querySelector('input[name="goal"]:checked').value; if (!age || !weight || !height) { alert(translations[currentLang].alertFill); return; } let bmr = (10 * weight) + (6.25 * height) - (5 * age); bmr = (gender === 'male') ? bmr + 5 : bmr - 161; const maintenance = bmr * activity; let final = 0, titleKey = "", advKey = ""; if(goal === 'lose') { final = maintenance - 500; titleKey = "resLose"; advKey = "adv1"; } else if(goal === 'maintain') { final = maintenance; titleKey = "resMaintain"; advKey = "adv2"; } else if(goal === 'gain') { final = maintenance + 400; titleKey = "resGain"; advKey = "adv3"; } else { final = maintenance + 250; titleKey = "resMuscle"; advKey = "adv4"; } document.getElementById('calResult').innerText = Math.round(final) + " kcal"; document.getElementById('resTitle').innerText = translations[currentLang][titleKey]; document.getElementById('resAdvice').innerText = translations[currentLang][advKey]; document.getElementById('resultArea').style.display = 'block'; }
-    function calculateMacros() { const cal = parseInt(document.getElementById('macroCalInput').value); if(!cal) { alert(translations[currentLang].alertFill); return; } document.getElementById('resPro').innerText = Math.round((cal * 0.30) / 4); document.getElementById('resCarb').innerText = Math.round((cal * 0.45) / 4); document.getElementById('resFat').innerText = Math.round((cal * 0.25) / 9); document.getElementById('macroResult').style.display = 'block'; }
-    function calculateFat() { const n = parseFloat(document.getElementById('neck').value); const w = parseFloat(document.getElementById('waist').value); const h = parseFloat(document.getElementById('height').value) || 170; if(!n || !w) { alert(translations[currentLang].alertFill); return; } let fat = 495 / (1.0324 - 0.19077 * Math.log10(w - n) + 0.15456 * Math.log10(h)) - 450; if(fat < 2) fat = 5; document.getElementById('resFatPerc').innerText = "%" + Math.round(fat); document.getElementById('fatResult').style.display = 'block'; }
+
+    function showInfo(type) { 
+        currentInfoType = type; 
+        showPage('none'); 
+        document.getElementById('infoPage').style.display = 'block'; 
+        updateInfoContent(); 
+    }
+
+    function updateInfoContent() { 
+        if (!currentInfoType) return; 
+        const content = document.getElementById('infoContent'); 
+        const l = translations[currentLang]; 
+        if(currentInfoType === 'about') content.innerHTML = `<h3>${l.navAbout}</h3><p>${l.txtAbout}</p>`; 
+        else if(currentInfoType === 'privacy') content.innerHTML = `<h3>${l.navPrivacy}</h3><p>${l.txtPrivacy}</p>`; 
+        else if(currentInfoType === 'contact') content.innerHTML = `<h3>${l.navContact}</h3><p>${l.txtContact}</p>`; 
+    }
+
+    function setLanguage(lang) { 
+        currentLang = lang; 
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active')); 
+        document.getElementById('btn-' + lang).classList.add('active'); 
+        for (let key in translations[lang]) { 
+            let el = document.getElementById('t-' + key); 
+            if (el) el.innerText = translations[lang][key]; 
+        } 
+        updateInfoContent(); 
+    }
+
+    function calculateCalorie() { 
+        const age = parseInt(document.getElementById('age').value); 
+        const weight = parseInt(document.getElementById('weight').value); 
+        const height = parseInt(document.getElementById('height').value); 
+        const activity = parseFloat(document.getElementById('activity').value); 
+        const gender = document.querySelector('input[name="gender"]:checked').value; 
+        const goal = document.querySelector('input[name="goal"]:checked').value; 
+        if (!age || !weight || !height) { alert(translations[currentLang].alertFill); return; } 
+        let bmr = (10 * weight) + (6.25 * height) - (5 * age); 
+        bmr = (gender === 'male') ? bmr + 5 : bmr - 161; 
+        const maintenance = bmr * activity; 
+        let final = 0, titleKey = "", advKey = ""; 
+        if(goal === 'lose') { final = maintenance - 500; titleKey = "resLose"; advKey = "adv1"; } 
+        else if(goal === 'maintain') { final = maintenance; titleKey = "resMaintain"; advKey = "adv2"; } 
+        else if(goal === 'gain') { final = maintenance + 400; titleKey = "resGain"; advKey = "adv3"; } 
+        else { final = maintenance + 250; titleKey = "resMuscle"; advKey = "adv4"; } 
+        document.getElementById('calResult').innerText = Math.round(final) + " kcal"; 
+        document.getElementById('resTitle').innerText = translations[currentLang][titleKey]; 
+        document.getElementById('resAdvice').innerText = translations[currentLang][advKey]; 
+        document.getElementById('resultArea').style.display = 'block'; 
+    }
+
+    function calculateMacros() { 
+        const cal = parseInt(document.getElementById('macroCalInput').value); 
+        if(!cal) { alert(translations[currentLang].alertFill); return; } 
+        document.getElementById('resPro').innerText = Math.round((cal * 0.30) / 4); 
+        document.getElementById('resCarb').innerText = Math.round((cal * 0.45) / 4); 
+        document.getElementById('resFat').innerText = Math.round((cal * 0.25) / 9); 
+        document.getElementById('macroResult').style.display = 'block'; 
+    }
+
+    function calculateFat() { 
+        const n = parseFloat(document.getElementById('neck').value); 
+        const w = parseFloat(document.getElementById('waist').value); 
+        const h = parseFloat(document.getElementById('height').value) || 170; 
+        if(!n || !w) { alert(translations[currentLang].alertFill); return; } 
+        let fat = 495 / (1.0324 - 0.19077 * Math.log10(w - n) + 0.15456 * Math.log10(h)) - 450; 
+        if(fat < 2) fat = 5; 
+        document.getElementById('resFatPerc').innerText = "%" + Math.round(fat); 
+        document.getElementById('fatResult').style.display = 'block'; 
+    }
 </script>
 </body>
 </html>
