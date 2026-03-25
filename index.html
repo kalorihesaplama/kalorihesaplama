@@ -1,12 +1,173 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" dir="ltr" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MetsCal | Profesyonel Kalori Hesaplayıcı</title>
+
+    <!-- ========== PRIMARY META TAGS ========== -->
+    <title>MetsCal | Profesyonel Kalori Hesaplayıcı - Günlük Kalori İhtiyacı</title>
+    <meta name="title" content="MetsCal | Profesyonel Kalori Hesaplayıcı - Günlük Kalori İhtiyacı">
+    <meta name="description" content="MetsCal ile günlük kalori ihtiyacınızı hesaplayın. Kilo verme, kilo alma, kas yapma hedeflerinize uygun kalori ve makro besin değerlerini öğrenin. Ücretsiz online kalori hesaplayıcı.">
+    <meta name="keywords" content="kalori hesaplama, günlük kalori ihtiyacı, kalori hesaplayıcı, makro hesaplama, vücut yağ oranı, BMR hesaplama, kilo verme, kas yapma, diyet, beslenme, MetsCal, calorie calculator, ideal kilo, su ihtiyacı, BMI hesaplama, vücut kitle indeksi">
+    <meta name="author" content="Mete Yılmaz - MetsCal">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="theme-color" content="#ff3c00">
+    <meta name="msapplication-TileColor" content="#ff3c00">
+    <meta name="application-name" content="MetsCal">
+    <meta name="apple-mobile-web-app-title" content="MetsCal">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="general">
+    <meta name="copyright" content="MetsCal 2024-2026 - Mete Yılmaz">
+    <meta name="language" content="Turkish">
+    <meta name="distribution" content="global">
+    <meta name="geo.region" content="TR">
+    <meta name="geo.placename" content="Turkey">
+
+    <!-- ========== CANONICAL & HREFLANG ========== -->
+    <link rel="canonical" href="https://metscal.github.io/metscal/">
+    <link rel="alternate" hreflang="tr" href="https://metscal.github.io/metscal/">
+    <link rel="alternate" hreflang="en" href="https://metscal.github.io/metscal/?lang=en">
+    <link rel="alternate" hreflang="ru" href="https://metscal.github.io/metscal/?lang=ru">
+    <link rel="alternate" hreflang="x-default" href="https://metscal.github.io/metscal/">
+
+    <!-- ========== OPEN GRAPH / FACEBOOK ========== -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metscal.github.io/metscal/">
+    <meta property="og:title" content="MetsCal | Profesyonel Kalori Hesaplayıcı">
+    <meta property="og:description" content="Günlük kalori ihtiyacınızı, makro besin değerlerinizi ve vücut yağ oranınızı ücretsiz hesaplayın. Sporcular için profesyonel hesaplama aracı.">
+    <meta property="og:image" content="https://metscal.github.io/metscal/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="MetsCal Kalori Hesaplayıcı Logo">
+    <meta property="og:site_name" content="MetsCal">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ru_RU">
+
+    <!-- ========== TWITTER CARD ========== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://metscal.github.io/metscal/">
+    <meta name="twitter:title" content="MetsCal | Profesyonel Kalori Hesaplayıcı">
+    <meta name="twitter:description" content="Günlük kalori ihtiyacınızı, makro besin değerlerinizi ve vücut yağ oranınızı ücretsiz hesaplayın.">
+    <meta name="twitter:image" content="https://metscal.github.io/metscal/logo.png">
+    <meta name="twitter:image:alt" content="MetsCal Kalori Hesaplayıcı">
+
+    <!-- ========== FAVICON & ICONS ========== -->
     <link rel="shortcut icon" type="image/png" href="logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+
+    <!-- ========== PRECONNECT & DNS-PREFETCH ========== -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//acceptable.a-ads.com">
+
+    <!-- ========== CSS ========== -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <!-- ========== JSON-LD STRUCTURED DATA ========== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://metscal.github.io/metscal/#website",
+                "url": "https://metscal.github.io/metscal/",
+                "name": "MetsCal",
+                "description": "Profesyonel kalori hesaplayıcı - Günlük kalori ihtiyacı, makro besin, vücut yağ oranı, ideal kilo, su ihtiyacı ve BMI hesaplama",
+                "publisher": { "@id": "https://metscal.github.io/metscal/#organization" },
+                "inLanguage": ["tr", "en", "ru"],
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://metscal.github.io/metscal/?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "Organization",
+                "@id": "https://metscal.github.io/metscal/#organization",
+                "name": "MetsCal",
+                "url": "https://metscal.github.io/metscal/",
+                "logo": { "@type": "ImageObject", "url": "https://metscal.github.io/metscal/logo.png", "width": 512, "height": 512 },
+                "founder": { "@type": "Person", "name": "Mete Yılmaz", "jobTitle": "Bilişim Öğrencisi" },
+                "contactPoint": { "@type": "ContactPoint", "email": "motivetate7@gmail.com", "contactType": "customer service", "availableLanguage": ["Turkish", "English", "Russian"] }
+            },
+            {
+                "@type": "WebApplication",
+                "@id": "https://metscal.github.io/metscal/#app",
+                "name": "MetsCal Kalori Hesaplayıcı",
+                "url": "https://metscal.github.io/metscal/",
+                "applicationCategory": "HealthApplication",
+                "operatingSystem": "All",
+                "browserRequirements": "Requires JavaScript",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+                "featureList": [
+                    "Günlük kalori ihtiyacı hesaplama",
+                    "Makro besin değerleri hesaplama",
+                    "Vücut yağ oranı hesaplama",
+                    "Günlük su ihtiyacı hesaplama",
+                    "İdeal kilo hesaplama",
+                    "BMI vücut kitle indeksi hesaplama",
+                    "Çoklu dil desteği (TR, EN, RU)"
+                ],
+                "description": "Sporcular ve sağlıklı yaşam meraklıları için profesyonel kalori ve beslenme hesaplama aracı.",
+                "inLanguage": ["tr", "en", "ru"],
+                "creator": { "@id": "https://metscal.github.io/metscal/#organization" }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Günlük kalori ihtiyacı nasıl hesaplanır?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Günlük kalori ihtiyacı; yaş, cinsiyet, boy, kilo ve aktivite seviyesine göre Mifflin-St Jeor formülü kullanılarak hesaplanır." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Günlük ne kadar su içmeliyim?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Genel kural olarak vücut ağırlığınızın her kilogramı için 30-35 ml su içmeniz önerilir. Aktivite seviyenize göre bu miktar artabilir." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "İdeal kilom kaç olmalı?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "İdeal kilo; boy, cinsiyet ve vücut yapısına göre Devine formülü ile hesaplanır. Bu değer genel bir rehberdir." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "BMI (Vücut Kitle İndeksi) nedir?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "BMI, kilonuzun boyunuzun karesine bölünmesiyle hesaplanır. 18.5-24.9 arası normal kabul edilir." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Vücut yağ oranı nasıl hesaplanır?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Vücut yağ oranı, boyun çevresi, bel çevresi ve boy ölçümleri kullanılarak ABD Donanması formülü ile tahmin edilebilir." }
+                    }
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://metscal.github.io/metscal/" },
+                    { "@type": "ListItem", "position": 2, "name": "Kalori Hesaplayıcı", "item": "https://metscal.github.io/metscal/#calculator" }
+                ]
+            }
+        ]
+    }
+    </script>
+
     <style>
         :root { --mac-red: #ff3c00; --mac-dark: #1a1a1a; }
         body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; }
@@ -20,7 +181,7 @@
         .side-panel { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); height: fit-content; position: sticky; top: 20px; border: 1px solid #eee; }
         @media (max-width: 991px) { .side-panel { position: relative !important; top: 0 !important; } .lang-text { display: none; } }
         .calculator-card { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 6px solid var(--mac-red); }
-        #infoPage, #macroCalc, #fatCalc { display: none; }
+        #infoPage, #macroCalc, #fatCalc, #waterCalc, #idealCalc, #bmiCalc { display: none; }
         .btn-calculate { background-color: var(--mac-red); color: white; border: none; padding: 15px; font-weight: bold; letter-spacing: 1px; transition: 0.3s; }
         .btn-calculate:hover { background-color: #cc3000; transform: scale(1.02); }
         .motivation-quote { font-family: 'Dancing Script', cursive; font-size: 1.6rem; color: var(--mac-red); text-align: center; margin: 20px 0; line-height: 1.3; }
@@ -29,348 +190,682 @@
         .sister-site:hover { color: var(--mac-red); text-decoration: underline; }
         .result-box { display: none; margin-top: 25px; padding-top: 20px; border-top: 1px solid #eee; }
         .error-box { display: none; font-size: 0.9rem; font-weight: 600; text-align: center; }
+        .visually-hidden-seo { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+        .bmi-category { padding: 8px 16px; border-radius: 8px; font-weight: 600; font-size: 1rem; display: inline-block; margin-top: 10px; }
     </style>
 </head>
 <body onload="setLanguage('tr')">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-    <div class="container">
-        <a class="navbar-brand mb-0 h1 fs-3" href="javascript:void(0)" onclick="showPage('main')">
-            Mets<span style="color: var(--mac-red);">CAL</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav gap-lg-4 text-center">
-                <li class="nav-item"><a class="nav-link-custom" id="t-navAbout" onclick="showInfo('about')">HAKKIMIZDA</a></li>
-                <li class="nav-item"><a class="nav-link-custom" id="t-navPrivacy" onclick="showInfo('privacy')">GİZLİLİK</a></li>
-                <li class="nav-item"><a class="nav-link-custom" id="t-navContact" onclick="showInfo('contact')">İLETİŞİM</a></li>
-            </ul>
-        </div>
-        <div class="lang-box ms-auto">
-            <span class="lang-text" id="t-langText">LANGUAGE</span>
-            <button class="lang-btn" id="btn-tr" onclick="setLanguage('tr')">TR</button>
-            <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
-            <button class="lang-btn" id="btn-ru" onclick="setLanguage('ru')">RU</button>
-        </div>
-    </div>
-</nav>
+<a href="#mainContent" class="visually-hidden-seo">Ana içeriğe geç</a>
 
-<div class="container-fluid px-lg-5">
-    <div class="row">
-        <div class="col-lg-2 mb-4 mb-lg-0">
-            <div class="side-panel text-center">
-                <h6 class="text-muted mb-3" id="t-sponsor">SPONSORLU</h6>
-                <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
-                  <iframe data-aa='2430424' src='//acceptable.a-ads.com/2430424/?size=Adaptive' style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
-                  <div style="width: 70%;margin:auto;position: absolute;left: 0;right: 0">
-                    <a target="_blank" style="display:inline-block;font-size: 13px;color: #263238;padding: 4px 10px;background: #F8F8F9;text-decoration: none; border-radius: 0 0 4px 4px;" id="frame-link" href="https://aads.com/campaigns/new/?source_id=2430424&source_type=ad_unit&partner=2430424">Advertise here</a>
-                  </div>
-                </div>
+<!-- ========== HEADER / NAV ========== -->
+<header role="banner">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4" aria-label="Ana navigasyon">
+        <div class="container">
+            <a class="navbar-brand mb-0 h1 fs-3" href="javascript:void(0)" onclick="showPage('main')" aria-label="MetsCal Ana Sayfa">
+                Mets<span style="color: var(--mac-red);">CAL</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü aç/kapat">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-lg-4 text-center" role="menubar">
+                    <li class="nav-item" role="none"><a class="nav-link-custom" role="menuitem" id="t-navAbout" onclick="showInfo('about')">HAKKIMIZDA</a></li>
+                    <li class="nav-item" role="none"><a class="nav-link-custom" role="menuitem" id="t-navPrivacy" onclick="showInfo('privacy')">GİZLİLİK</a></li>
+                    <li class="nav-item" role="none"><a class="nav-link-custom" role="menuitem" id="t-navContact" onclick="showInfo('contact')">İLETİŞİM</a></li>
+                </ul>
+            </div>
+            <div class="lang-box ms-auto" role="group" aria-label="Dil seçimi">
+                <span class="lang-text" id="t-langText">LANGUAGE</span>
+                <button class="lang-btn" id="btn-tr" onclick="setLanguage('tr')" aria-label="Türkçe" title="Türkçe">TR</button>
+                <button class="lang-btn" id="btn-en" onclick="setLanguage('en')" aria-label="English" title="English">EN</button>
+                <button class="lang-btn" id="btn-ru" onclick="setLanguage('ru')" aria-label="Русский" title="Русский">RU</button>
             </div>
         </div>
+    </nav>
+</header>
 
-        <div class="col-lg-6 col-md-8 mx-auto">
-            <div id="mainCalculator" class="calculator-card">
-                <h2 class="text-center mb-4"><span id="t-title1">Günlük Kalori</span> <span style="color: var(--mac-red);" id="t-title2">İhtiyacın</span></h2>
-                <form id="calorieForm">
+<!-- ========== MAIN CONTENT ========== -->
+<main id="mainContent" role="main">
+    <div class="container-fluid px-lg-5">
+        <div class="row">
+
+            <!-- SOL PANEL -->
+            <aside class="col-lg-2 mb-4 mb-lg-0" role="complementary" aria-label="Sponsorlu alan">
+                <div class="side-panel text-center">
+                    <h6 class="text-muted mb-3" id="t-sponsor">SPONSORLU</h6>
+                    <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
+                      <iframe data-aa='2430424' src='//acceptable.a-ads.com/2430424/?size=Adaptive' title="Reklam alanı" loading="lazy" style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+                      <div style="width: 70%;margin:auto;position: absolute;left: 0;right: 0">
+                        <a target="_blank" rel="noopener noreferrer sponsored" style="display:inline-block;font-size: 13px;color: #263238;padding: 4px 10px;background: #F8F8F9;text-decoration: none; border-radius: 0 0 4px 4px;" id="frame-link" href="https://aads.com/campaigns/new/?source_id=2430424&source_type=ad_unit&partner=2430424">Advertise here</a>
+                      </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ANA İÇERİK -->
+            <div class="col-lg-6 col-md-8 mx-auto">
+
+                <h1 class="visually-hidden-seo">MetsCal - Ücretsiz Online Kalori Hesaplayıcı, Makro Besin, İdeal Kilo, Su İhtiyacı, BMI ve Vücut Yağ Oranı Hesaplama Aracı</h1>
+
+                <!-- ===== KALORİ HESAPLAYICI ===== -->
+                <section id="mainCalculator" class="calculator-card" aria-label="Kalori hesaplayıcı">
+                    <h2 class="text-center mb-4"><span id="t-title1">Günlük Kalori</span> <span style="color: var(--mac-red);" id="t-title2">İhtiyacın</span></h2>
+                    <form id="calorieForm" aria-label="Kalori hesaplama formu" novalidate>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label class="form-label fw-bold" id="t-labelGender">Cinsiyet</label>
+                                <div class="btn-group w-100" role="group" aria-label="Cinsiyet seçimi">
+                                    <input type="radio" class="btn-check" name="gender" id="male" value="male" checked>
+                                    <label class="btn btn-outline-danger" for="male" id="t-male">ERKEK</label>
+                                    <input type="radio" class="btn-check" name="gender" id="female" value="female">
+                                    <label class="btn btn-outline-danger" for="female" id="t-female">KADIN</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label" for="age" id="t-age">Yaş</label>
+                                <input type="number" class="form-control" id="age" placeholder="25" min="10" max="120" aria-required="true" inputmode="numeric">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label" for="height" id="t-height">Boy (cm)</label>
+                                <input type="number" class="form-control" id="height" placeholder="180" min="100" max="250" aria-required="true" inputmode="numeric">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label" for="weight" id="t-weight">Kilo (kg)</label>
+                                <input type="number" class="form-control" id="weight" placeholder="75" min="30" max="300" aria-required="true" inputmode="numeric">
+                            </div>
+                            <div class="col-12 mt-3">
+                                <label class="form-label" for="activity" id="t-labelActivity">Hareket Seviyesi</label>
+                                <select class="form-select" id="activity" aria-required="true">
+                                    <option value="1.2" id="t-act1">Hareketsiz (Masa başı)</option>
+                                    <option value="1.375" id="t-act2">Hafif (Haftada 1-2 spor)</option>
+                                    <option value="1.55" id="t-act3">Orta (Haftada 3-5 spor)</option>
+                                    <option value="1.725" id="t-act4">Yüksek (Haftada 6-7 spor)</option>
+                                </select>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <label class="form-label" id="t-labelGoal">Hedefin Nedir?</label>
+                                <div class="row g-2" role="group" aria-label="Hedef seçimi">
+                                    <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g1" value="lose" checked><label class="btn btn-outline-dark w-100 py-3" for="g1" id="t-goal1">📉 Kilo Ver</label></div>
+                                    <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g2" value="maintain"><label class="btn btn-outline-dark w-100 py-3" for="g2" id="t-goal2">⚖️ Koru</label></div>
+                                    <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g3" value="gain"><label class="btn btn-outline-dark w-100 py-3" for="g3" id="t-goal3">🍔 Kilo Al</label></div>
+                                    <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g4" value="muscle"><label class="btn btn-outline-dark w-100 py-3" for="g4" id="t-goal4">💪 Kas Yap</label></div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4"><button type="button" onclick="calculateCalorie()" class="btn btn-calculate w-100" id="t-btnCalc" aria-label="Kalori hesapla">HESAPLA</button></div>
+                        </div>
+                    </form>
+                    <div id="calError" class="alert alert-danger mt-3 error-box" role="alert" aria-live="polite"></div>
+                    <div id="resultArea" class="result-box text-center" role="region" aria-live="polite" aria-label="Hesaplama sonucu">
+                        <h4 id="resTitle"></h4>
+                        <div class="display-3 fw-bold text-danger" id="calResult">0</div>
+                        <div class="alert alert-info mt-3" id="resAdvice"></div>
+                    </div>
+                </section>
+
+                <!-- ===== MAKRO HESAPLAYICI ===== -->
+                <section id="macroCalc" class="calculator-card" aria-label="Makro besin hesaplayıcı">
+                    <button class="btn btn-sm btn-outline-dark mb-3" onclick="showPage('main')"><span id="t-btnBack1">← Geri Dön</span></button>
+                    <h2 class="text-center mb-4" id="t-tool1Title">🍗 Makro Hesaplama</h2>
                     <div class="row g-3">
                         <div class="col-12">
-                            <label class="form-label fw-bold" id="t-labelGender">Cinsiyet</label>
-                            <div class="btn-group w-100">
-                                <input type="radio" class="btn-check" name="gender" id="male" value="male" checked>
-                                <label class="btn btn-outline-danger" for="male" id="t-male">ERKEK</label>
-                                <input type="radio" class="btn-check" name="gender" id="female" value="female">
-                                <label class="btn btn-outline-danger" for="female" id="t-female">KADIN</label>
-                            </div>
+                            <label class="form-label" for="macroCalInput" id="t-macroDaily">Günlük Hedef Kalorin</label>
+                            <input type="number" id="macroCalInput" class="form-control" placeholder="2500" min="500" max="10000" aria-required="true" inputmode="numeric">
                         </div>
-                        <div class="col-md-4"><label class="form-label" id="t-age">Yaş</label><input type="number" class="form-control" id="age" placeholder="25"></div>
-                        <div class="col-md-4"><label class="form-label" id="t-height">Boy (cm)</label><input type="number" class="form-control" id="height" placeholder="180"></div>
-                        <div class="col-md-4"><label class="form-label" id="t-weight">Kilo (kg)</label><input type="number" class="form-control" id="weight" placeholder="75"></div>
-                        <div class="col-12 mt-3">
-                            <label class="form-label" id="t-labelActivity">Hareket Seviyesi</label>
-                            <select class="form-select" id="activity">
-                                <option value="1.2" id="t-act1">Hareketsiz (Masa başı)</option>
-                                <option value="1.375" id="t-act2">Hafif (Haftada 1-2 spor)</option>
-                                <option value="1.55" id="t-act3">Orta (Haftada 3-5 spor)</option>
-                                <option value="1.725" id="t-act4">Yüksek (Haftada 6-7 spor)</option>
+                        <div class="col-12 mt-3"><button onclick="calculateMacros()" class="btn btn-calculate w-100" id="t-btnCalcMacro">MAKROLARI BUL</button></div>
+                    </div>
+                    <div id="macroError" class="alert alert-danger mt-3 error-box" role="alert" aria-live="polite"></div>
+                    <div id="macroResult" class="result-box" role="region" aria-live="polite">
+                        <div class="row text-center g-2">
+                            <div class="col-4"><div class="p-2 border rounded"><strong>PRO</strong><br><span id="resPro" class="text-danger">0</span>g</div></div>
+                            <div class="col-4"><div class="p-2 border rounded"><strong>KARB</strong><br><span id="resCarb" class="text-danger">0</span>g</div></div>
+                            <div class="col-4"><div class="p-2 border rounded"><strong>YAĞ</strong><br><span id="resFat" class="text-danger">0</span>g</div></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== VÜCUT YAĞ ORANI ===== -->
+                <section id="fatCalc" class="calculator-card" aria-label="Vücut yağ oranı hesaplayıcı">
+                    <button class="btn btn-sm btn-outline-dark mb-3" onclick="showPage('main')"><span id="t-btnBack2">← Geri Dön</span></button>
+                    <h2 class="text-center mb-4" id="t-tool2Title">⚖️ Vücut Yağ Oranı</h2>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <label class="form-label" for="neck" id="t-neck">Boyun Çevresi (cm)</label>
+                            <input type="number" id="neck" class="form-control" placeholder="40" min="20" max="80" aria-required="true" inputmode="numeric">
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label" for="waist" id="t-waist">Bel Çevresi (cm)</label>
+                            <input type="number" id="waist" class="form-control" placeholder="90" min="40" max="200" aria-required="true" inputmode="numeric">
+                        </div>
+                        <div class="col-12 mt-3"><button onclick="calculateFat()" class="btn btn-calculate w-100" id="t-btnCalcFat">HESAPLA</button></div>
+                    </div>
+                    <div id="fatError" class="alert alert-danger mt-3 error-box" role="alert" aria-live="polite"></div>
+                    <div id="fatResult" class="result-box text-center" role="region" aria-live="polite">
+                        <h4 id="t-fatResTitle">Tahmini Yağ Oranı:</h4>
+                        <div class="display-3 fw-bold text-danger" id="resFatPerc">%0</div>
+                    </div>
+                </section>
+
+                <!-- ===== SU İHTİYACI HESAPLAMA ===== -->
+                <section id="waterCalc" class="calculator-card" aria-label="Su ihtiyacı hesaplayıcı">
+                    <button class="btn btn-sm btn-outline-dark mb-3" onclick="showPage('main')"><span id="t-btnBackW">← Geri Dön</span></button>
+                    <h2 class="text-center mb-4" id="t-tool3Title">💧 Günlük Su İhtiyacı</h2>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label" for="waterWeight" id="t-waterWeight">Kilo (kg)</label>
+                            <input type="number" id="waterWeight" class="form-control" placeholder="75" min="30" max="300" aria-required="true" inputmode="numeric">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="waterActivity" id="t-waterActivity">Aktivite Seviyesi</label>
+                            <select class="form-select" id="waterActivity">
+                                <option value="30" id="t-wAct1">Hareketsiz</option>
+                                <option value="35" id="t-wAct2">Hafif Aktif</option>
+                                <option value="40" id="t-wAct3">Orta Aktif</option>
+                                <option value="45" id="t-wAct4">Çok Aktif / Sporcu</option>
                             </select>
                         </div>
-                        <div class="col-12 mt-4">
-                            <label class="form-label" id="t-labelGoal">Hedefin Nedir?</label>
-                            <div class="row g-2">
-                                <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g1" value="lose" checked><label class="btn btn-outline-dark w-100 py-3" for="g1" id="t-goal1">📉 Kilo Ver</label></div>
-                                <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g2" value="maintain"><label class="btn btn-outline-dark w-100 py-3" for="g2" id="t-goal2">⚖️ Koru</label></div>
-                                <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g3" value="gain"><label class="btn btn-outline-dark w-100 py-3" for="g3" id="t-goal3">🍔 Kilo Al</label></div>
-                                <div class="col-6"><input type="radio" class="btn-check" name="goal" id="g4" value="muscle"><label class="btn btn-outline-dark w-100 py-3" for="g4" id="t-goal4">💪 Kas Yap</label></div>
+                        <div class="col-12 mt-3"><button onclick="calculateWater()" class="btn btn-calculate w-100" id="t-btnCalcWater">HESAPLA</button></div>
+                    </div>
+                    <div id="waterError" class="alert alert-danger mt-3 error-box" role="alert" aria-live="polite"></div>
+                    <div id="waterResult" class="result-box text-center" role="region" aria-live="polite">
+                        <h4 id="t-waterResTitle">Günlük Su İhtiyacın:</h4>
+                        <div class="display-3 fw-bold text-danger" id="resWater">0</div>
+                        <div class="alert alert-info mt-3" id="waterAdvice"></div>
+                    </div>
+                </section>
+
+                <!-- ===== İDEAL KİLO HESAPLAMA ===== -->
+                <section id="idealCalc" class="calculator-card" aria-label="İdeal kilo hesaplayıcı">
+                    <button class="btn btn-sm btn-outline-dark mb-3" onclick="showPage('main')"><span id="t-btnBackI">← Geri Dön</span></button>
+                    <h2 class="text-center mb-4" id="t-tool4Title">🎯 İdeal Kilo Hesaplama</h2>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label" for="idealHeight" id="t-idealHeight">Boy (cm)</label>
+                            <input type="number" id="idealHeight" class="form-control" placeholder="175" min="100" max="250" aria-required="true" inputmode="numeric">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" id="t-idealGender">Cinsiyet</label>
+                            <div class="btn-group w-100" role="group">
+                                <input type="radio" class="btn-check" name="idealGender" id="idealMale" value="male" checked>
+                                <label class="btn btn-outline-danger" for="idealMale" id="t-idealMale">ERKEK</label>
+                                <input type="radio" class="btn-check" name="idealGender" id="idealFemale" value="female">
+                                <label class="btn btn-outline-danger" for="idealFemale" id="t-idealFemale">KADIN</label>
                             </div>
                         </div>
-                        <div class="col-12 mt-4"><button type="button" onclick="calculateCalorie()" class="btn btn-calculate w-100" id="t-btnCalc">HESAPLA</button></div>
+                        <div class="col-12 mt-3"><button onclick="calculateIdeal()" class="btn btn-calculate w-100" id="t-btnCalcIdeal">HESAPLA</button></div>
                     </div>
-                </form>
-                <div id="calError" class="alert alert-danger mt-3 error-box"></div>
-                <div id="resultArea" class="result-box text-center">
-                    <h4 id="resTitle"></h4>
-                    <div class="display-3 fw-bold text-danger" id="calResult">0</div>
-                    <div class="alert alert-info mt-3" id="resAdvice"></div>
-                </div>
-            </div>
-
-            <div id="macroCalc" class="calculator-card">
-                <button class="btn btn-sm btn-outline-dark mb-3" onclick="showPage('main')"><span id="t-btnBack1">← Geri Dön</span></button>
-                <h2 class="text-center mb-4" id="t-tool1Title">🍗 Makro Hesaplama</h2>
-                <div class="row g-3">
-                    <div class="col-12"><label class="form-label" id="t-macroDaily">Günlük Hedef Kalorin</label><input type="number" id="macroCalInput" class="form-control" placeholder="2500"></div>
-                    <div class="col-12 mt-3"><button onclick="calculateMacros()" class="btn btn-calculate w-100" id="t-btnCalcMacro">MAKROLARI BUL</button></div>
-                </div>
-                <div id="macroError" class="alert alert-danger mt-3 error-box"></div>
-                <div id="macroResult" class="result-box">
-                    <div class="row text-center g-2">
-                        <div class="col-4"><div class="p-2 border rounded"><strong>PRO</strong><br><span id="resPro" class="text-danger">0</span>g</div></div>
-                        <div class="col-4"><div class="p-2 border rounded"><strong>KARB</strong><br><span id="resCarb" class="text-danger">0</span>g</div></div>
-                        <div class="col-4"><div class="p-2 border rounded"><strong>YAĞ</strong><br><span id="resFat" class="text-danger">0</span>g</div></div>
+                    <div id="idealError" class="alert alert-danger mt-3 error-box" role="alert" aria-live="polite"></div>
+                    <div id="idealResult" class="result-box text-center" role="region" aria-live="polite">
+                        <h4 id="t-idealResTitle">İdeal Kilo Aralığın:</h4>
+                        <div class="display-3 fw-bold text-danger" id="resIdeal">0</div>
+                        <div class="alert alert-info mt-3" id="idealAdvice"></div>
                     </div>
-                </div>
+                </section>
+
+                <!-- ===== BMI HESAPLAMA ===== -->
+                <section id="bmiCalc" class="calculator-card" aria-label="BMI hesaplayıcı">
+                    <button class="btn btn-sm btn-outline-dark mb-3" onclick="showPage('main')"><span id="t-btnBackB">← Geri Dön</span></button>
+                    <h2 class="text-center mb-4" id="t-tool5Title">📊 BMI - Vücut Kitle İndeksi</h2>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label" for="bmiHeight" id="t-bmiHeight">Boy (cm)</label>
+                            <input type="number" id="bmiHeight" class="form-control" placeholder="175" min="100" max="250" aria-required="true" inputmode="numeric">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="bmiWeight" id="t-bmiWeight">Kilo (kg)</label>
+                            <input type="number" id="bmiWeight" class="form-control" placeholder="75" min="20" max="300" aria-required="true" inputmode="numeric">
+                        </div>
+                        <div class="col-12 mt-3"><button onclick="calculateBMI()" class="btn btn-calculate w-100" id="t-btnCalcBmi">HESAPLA</button></div>
+                    </div>
+                    <div id="bmiError" class="alert alert-danger mt-3 error-box" role="alert" aria-live="polite"></div>
+                    <div id="bmiResult" class="result-box text-center" role="region" aria-live="polite">
+                        <h4 id="t-bmiResTitle">BMI Değerin:</h4>
+                        <div class="display-3 fw-bold text-danger" id="resBmi">0</div>
+                        <div id="bmiCategory" class="bmi-category mt-2"></div>
+                        <div class="alert alert-info mt-3" id="bmiAdvice"></div>
+                    </div>
+                </section>
+
+                <!-- ===== BİLGİ SAYFALARI ===== -->
+                <article id="infoPage" class="calculator-card" aria-label="Bilgi sayfası">
+                    <button class="btn btn-sm btn-outline-dark mb-4" onclick="showPage('main')"><span id="t-btnBack3">← Geri Dön</span></button>
+                    <div id="infoContent"></div>
+                </article>
+
+                <!-- ===== SEO İÇERİK BLOĞU ===== -->
+                <section class="calculator-card mt-4" aria-label="Kalori hesaplama hakkında bilgi" id="seoContentSection">
+                    <h2 class="mb-3" style="font-size:1.2rem;">📖 <span id="t-seoTitle">Kalori Hesaplama Nedir?</span></h2>
+                    <div class="small text-muted" id="t-seoContent">
+                        <p>Günlük kalori ihtiyacı, vücudunuzun temel metabolizma hızı (BMR) ve aktivite seviyenize göre belirlenir. <strong>MetsCal</strong>, bilimsel olarak kanıtlanmış <em>Mifflin-St Jeor formülünü</em> kullanarak size en doğru sonuçları sunar.</p>
+                        <p><strong>Nasıl çalışır?</strong> Yaşınız, boyunuz, kilonuz, cinsiyetiniz ve hareket seviyeniz gibi bilgileri girerek bazal metabolizma hızınız hesaplanır. Ardından hedefinize göre günlük almanız gereken kalori miktarı belirlenir.</p>
+                        <p>Ayrıca <strong>makro besin hesaplama</strong>, <strong>vücut yağ oranı</strong>, <strong>günlük su ihtiyacı</strong>, <strong>ideal kilo</strong> ve <strong>BMI (Vücut Kitle İndeksi)</strong> araçlarımızla sağlığınızı kapsamlı şekilde takip edebilirsiniz.</p>
+                    </div>
+                </section>
+
             </div>
 
-            <div id="fatCalc" class="calculator-card">
-                <button class="btn btn-sm btn-outline-dark mb-3" onclick="showPage('main')"><span id="t-btnBack2">← Geri Dön</span></button>
-                <h2 class="text-center mb-4" id="t-tool2Title">⚖️ Vücut Yağ Oranı</h2>
-                <div class="row g-3">
-                    <div class="col-6"><label class="form-label" id="t-neck">Boyun Çevresi (cm)</label><input type="number" id="neck" class="form-control" placeholder="40"></div>
-                    <div class="col-6"><label class="form-label" id="t-waist">Bel Çevresi (cm)</label><input type="number" id="waist" class="form-control" placeholder="90"></div>
-                    <div class="col-12 mt-3"><button onclick="calculateFat()" class="btn btn-calculate w-100" id="t-btnCalcFat">HESAPLA</button></div>
+            <!-- SAĞ PANEL -->
+            <aside class="col-lg-4 mt-4 mt-lg-0" role="complementary" aria-label="Ek bilgiler ve araçlar">
+                <div class="side-panel">
+                    <div class="motivation-quote" id="t-quote">"Acı geçicidir, ama zafer sonsuzdur!"</div>
+                    <hr>
+                    <h6 class="fw-bold mb-2" id="t-sisterTitle">🔗 KARDEŞ PROJEMİZ</h6>
+                    <p class="small" id="t-sisterDesc">LGS'ye hazırlanan dostlarımız için:</p>
+                    <a href="https://lgspuanhesaplama.github.io/lgspuanhesaplama/" target="_blank" rel="noopener noreferrer" class="sister-site d-block mb-3" id="t-sisterLink">🚀 LGS Puan Hesaplama Sistemi</a>
+                    <hr>
+                    <h6 class="fw-bold" id="t-infoTitle">PRATİK BİLGİ</h6>
+                    <p class="small text-muted" id="t-infoDesc">Vücut ağırlığının her 1 kilosu için yaklaşık 30-35 ml su içmeyi ihmal etme.</p>
+                    <hr>
+                    <h6 class="fw-bold text-uppercase" id="t-contactTitle">📩 İŞ BİRLİĞİ</h6>
+                    <p class="small mb-2" id="t-contactDesc">Sitemizde yer almak için:</p>
+                    <div class="contact-box"><strong>Email:</strong> <a href="mailto:motivetate7@gmail.com" style="color:inherit;">motivetate7@gmail.com</a></div>
+                    <hr>
+                    <h6 class="fw-bold text-uppercase mt-3 mb-3" id="t-otherTools">⚙️ DİĞER ARAÇLAR</h6>
+                    <nav aria-label="Diğer hesaplama araçları">
+                        <div class="d-grid gap-2">
+                            <button onclick="showPage('macro')" class="btn btn-outline-danger btn-sm text-start fw-bold" id="t-tool1">🍗 Makro Hesaplama</button>
+                            <button onclick="showPage('fat')" class="btn btn-outline-danger btn-sm text-start fw-bold" id="t-tool2">⚖️ Vücut Yağ Oranı Hesaplama</button>
+                            <button onclick="showPage('water')" class="btn btn-outline-danger btn-sm text-start fw-bold" id="t-tool3">💧 Günlük Su İhtiyacı</button>
+                            <button onclick="showPage('ideal')" class="btn btn-outline-danger btn-sm text-start fw-bold" id="t-tool4">🎯 İdeal Kilo Hesaplama</button>
+                            <button onclick="showPage('bmi')" class="btn btn-outline-danger btn-sm text-start fw-bold" id="t-tool5">📊 BMI Hesaplama</button>
+                        </div>
+                    </nav>
                 </div>
-                <div id="fatError" class="alert alert-danger mt-3 error-box"></div>
-                <div id="fatResult" class="result-box text-center">
-                    <h4 id="t-fatResTitle">Tahmini Yağ Oranı:</h4>
-                    <div class="display-3 fw-bold text-danger" id="resFatPerc">%0</div>
-                </div>
-            </div>
-
-            <div id="infoPage" class="calculator-card">
-                <button class="btn btn-sm btn-outline-dark mb-4" onclick="showPage('main')"><span id="t-btnBack3">← Geri Dön</span></button>
-                <div id="infoContent"></div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="side-panel">
-                <div class="motivation-quote" id="t-quote">"Acı geçicidir, ama zafer sonsuzdur!"</div>
-                <hr>
-                <h6 class="fw-bold mb-2" id="t-sisterTitle">🔗 KARDEŞ PROJEMİZ</h6>
-                <p class="small" id="t-sisterDesc">LGS'ye hazırlanan dostlarımız için:</p>
-                <a href="https://lgspuanhesaplama.github.io/lgspuanhesaplama/" target="_blank" class="sister-site d-block mb-3" id="t-sisterLink">🚀 LGS Puan Hesaplama Sistemi</a>
-                <hr>
-                <h6 class="fw-bold" id="t-infoTitle">PRATİK BİLGİ</h6>
-                <p class="small text-muted" id="t-infoDesc">Vücut ağırlığının her 1 kilosu için yaklaşık 30-35 ml su içmeyi ihmal etme.</p>
-                <hr>
-                <h6 class="fw-bold text-uppercase" id="t-contactTitle">📩 İŞ BİRLİĞİ</h6>
-                <p class="small mb-2" id="t-contactDesc">Sitemizde yer almak için:</p>
-                <div class="contact-box"><strong>Email:</strong> motivetate7@gmail.com</div>
-                <hr>
-                <h6 class="fw-bold text-uppercase mt-3 mb-3" id="t-otherTools">⚙️ DİĞER ARAÇLAR</h6>
-                <div class="d-grid gap-2">
-                    <button onclick="showPage('macro')" class="btn btn-outline-danger btn-sm text-start fw-bold" id="t-tool1">🍗 Makro Hesaplama</button>
-                    <button onclick="showPage('fat')" class="btn btn-outline-danger btn-sm text-start fw-bold" id="t-tool2">⚖️ Vücut Yağ Oranı Hesaplama</button>
-                </div>
-            </div>
+            </aside>
         </div>
     </div>
-</div>
+</main>
 
-<footer class="text-center py-5 text-muted">
-    <p>&copy; 2026 MetsCal | <span id="t-footer">Tüm Sporculara Başarılar!</span></p>
+<!-- ========== FOOTER ========== -->
+<footer class="text-center py-5 text-muted" role="contentinfo">
+    <p>&copy; 2026 MetsCal | <span id="t-footer">Tüm Hakları Saklıdır.</span></p>
+    <p class="small mt-1" style="opacity: 0.5;">Kalori Hesaplama · Makro Hesaplama · Vücut Yağ Oranı · Su İhtiyacı · İdeal Kilo · BMI</p>
 </footer>
 
+<!-- NOSCRIPT -->
+<noscript>
+    <div style="text-align:center;padding:40px;font-family:sans-serif;">
+        <h2>MetsCal - Kalori Hesaplayıcı</h2>
+        <p>Bu uygulama JavaScript gerektirir. Lütfen tarayıcınızda JavaScript'i etkinleştirin.</p>
+    </div>
+</noscript>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+
 <script>
-    const translations = {
-        tr: {
-            navAbout:"HAKKIMIZDA", navPrivacy:"GİZLİLİK", navContact:"İLETİŞİM", langText:"LANGUAGE",
-            sponsor:"SPONSORLU", title1:"Günlük Kalori", title2:"İhtiyacın", labelGender:"Cinsiyet",
-            male:"ERKEK", female:"KADIN", age:"Yaş", height:"Boy (cm)", weight:"Kilo (kg)",
-            labelActivity:"Hareket Seviyesi", act1:"Hareketsiz (Masa başı)", act2:"Hafif (Haftada 1-2 spor)",
-            act3:"Orta (Haftada 3-5 spor)", act4:"Yüksek (Haftada 6-7 spor)", labelGoal:"Hedefin Nedir?",
-            goal1:"📉 Kilo Ver", goal2:"⚖️ Koru", goal3:"🍔 Kilo Al", goal4:"💪 Kas Yap",
-            btnCalc:"HESAPLA", tool1Title:"🍗 Makro Hesaplama", macroDaily:"Günlük Hedef Kalorin",
-            btnCalcMacro:"MAKROLARI BUL", tool2Title:"⚖️ Vücut Yağ Oranı", neck:"Boyun Çevresi (cm)",
-            waist:"Bel Çevresi (cm)", btnCalcFat:"HESAPLA", fatResTitle:"Tahmini Yağ Oranı:",
-            btnBack1:"← Geri Dön", btnBack2:"← Geri Dön", btnBack3:"← Geri Dön",
-            quote:'"Acı geçicidir, ama zafer sonsuzdur!"', sisterTitle:"🔗 KARDEŞ PROJEMİZ",
-            sisterDesc:"LGS'ye hazırlanan dostlarımız için:", sisterLink:"🚀 LGS Puan Hesaplama Sistemi",
-            infoTitle:"PRATİK BİLGİ", infoDesc:"Vücut ağırlığının her 1 kilosu için yaklaşık 30-35 ml su içmeyi ihmal etme.",
-            contactTitle:"📩 İŞ BİRLİĞİ", contactDesc:"Sitemizde yer almak için:", otherTools:"⚙️ DİĞER ARAÇLAR",
-            tool1:"🍗 Makro Hesaplama", tool2:"⚖️ Vücut Yağ Oranı Hesaplama", footer:"Tüm Sporculara Başarılar!",
-            alertFill:"⚠️ Lütfen tüm alanları doldur!", resLose:"Kilo Vermek İçin:", resMaintain:"Kilonu Korumak İçin:",
-            resGain:"Kilo Almak İçin:", resMuscle:"Kas Yapmak İçin:", adv1:"Sağlıklı bir kalori açığı.", adv2:"Formunu korumak için ideal.",
-            adv3:"Kas kütlesi için temiz beslen.", adv4: "Proteini yüksek tutmayı unutma!",
-            txtAbout: "MetsCal, sporcular için geliştirilmiş profesyonel bir hesaplama aracıdır.",
-            txtPrivacy: "Verileriniz gizlidir ve hiçbir şekilde sunucularımızda saklanmaz.",
-            txtContact: "İş birliği için motivetate7@gmail.com adresinden ulaşabilirsiniz."
-        },
-        en: {
-            navAbout:"ABOUT", navPrivacy:"PRIVACY", navContact:"CONTACT", langText:"LANGUAGE",
-            sponsor:"SPONSORED", title1:"Daily Calorie", title2:"Needs", labelGender:"Gender",
-            male:"MALE", female:"FEMALE", age:"Age", height:"Height (cm)", weight:"Weight (kg)",
-            labelActivity:"Activity Level", act1:"Sedentary", act2:"Lightly Active",
-            act3:"Moderately Active", act4:"Very Active", labelGoal:"What is your goal?",
-            goal1:"📉 Lose Weight", goal2:"⚖️ Maintain", goal3:"🍔 Gain Weight", goal4:"💪 Build Muscle",
-            btnCalc:"CALCULATE", tool1Title:"🍗 Macro Calculator", macroDaily:"Daily Calorie Goal",
-            btnCalcMacro:"FIND MACROS", tool2Title:"⚖️ Body Fat Percentage", neck:"Neck (cm)",
-            waist:"Waist (cm)", btnCalcFat:"CALCULATE", fatResTitle:"Estimated Fat %:",
-            btnBack1:"← Go Back", btnBack2:"← Go Back", btnBack3:"← Go Back",
-            quote:'"Pain is temporary, pride is forever!"', sisterTitle:"🔗 SISTER PROJECT",
-            sisterDesc:"For friends preparing for LGS:", sisterLink:"🚀 LGS Score Calculator",
-            infoTitle:"PRACTICAL INFO", infoDesc:"Drink 30-35 ml of water for every kg of body weight.",
-            contactTitle:"📩 COOPERATION", contactDesc:"To be featured on our site:", otherTools:"⚙️ OTHER TOOLS",
-            tool1:"🍗 Macro Calculation", tool2:"⚖️ Body Fat Calculation", footer:"Good Luck to All Athletes!",
-            alertFill:"⚠️ Please fill all fields!", resLose:"To Lose Weight:", resMaintain:"To Maintain Weight:",
-            resGain:"To Gain Weight:", resMuscle:"To Build Muscle:", adv1:"A healthy calorie deficit.", adv2:"Perfect for staying in shape.",
-            adv3:"Eat clean for mass.", adv4: "Don't forget to keep protein high!",
-            txtAbout: "MetsCal is a professional tool designed for athletes to reach their goals.",
-            txtPrivacy: "Your data is private and is not stored on our servers.",
-            txtContact: "Contact us at motivetate7@gmail.com for cooperation."
-        },
-        ru: {
-            navAbout:"О НАС", navPrivacy:"ПРИВАТНОСТЬ", navContact:"КОНТАКТЫ", langText:"ЯЗЫК",
-            sponsor:"СПОНСОР", title1:"Дневные", title2:"Калории", labelGender:"Пол",
-            male:"МУЖЧИНА", female:"ЖЕНЩИНА", age:"Возраст", height:"Рост (см)", weight:"Вес (кг)",
-            labelActivity:"Активность", act1:"Сидячий", act2:"Легкий",
-            act3:"Средний", act4:"Высокий", labelGoal:"Какая ваша цель?",
-            goal1:"📉 Похудеть", goal2:"⚖️ Удержать", goal3:"🍔 Набрать", goal4:"💪 Мышцы",
-            btnCalc:"РАССЧИТАТЬ", tool1Title:"🍗 Расчет Макросов", macroDaily:"Цель калорий",
-            btnCalcMacro:"РАССЧИТАТЬ", tool2Title:"⚖️ Процент жира", neck:"Шея (см)",
-            waist:"Талия (см)", btnCalcFat:"РАССЧИТАТЬ", fatResTitle:"Процент жира:",
-            btnBack1:"← Назад", btnBack2:"← Назад", btnBack3:"← Назад",
-            quote:'"Боль временна, триумф вечен!"', sisterTitle:"🔗 НАШ ПРОЕКТ",
-            sisterDesc:"Для подготовки к LGS:", sisterLink:"🚀 Калькулятор баллов LGS",
-            infoTitle:"ИНФО", infoDesc:"Пейте 30-35 мл воды на каждый кг веса.",
-            contactTitle:"📩 СОТРУДНИЧЕСТВО", contactDesc:"Для связи:", otherTools:"⚙️ ИНСТРУМЕНТЫ",
-            tool1:"🍗 Расчет макросов", tool2:"⚖️ Процент жира", footer:"Удачи всем спортсменам!",
-            alertFill:"⚠️ Заполните все поля!", resLose:"Для похудения:", resMaintain:"Для поддержания:",
-            resGain:"Для набора веса:", resMuscle:"Для мышц:", adv1:"Здоровый дефицит калорий.", adv2:"Идеально для формы.",
-            adv3:"Ешьте чисто для массы.", adv4: "Не забывайте о белке!",
-            txtAbout: "MetsCal - это инструмент для достижения ваших фитнес-целей.",
-            txtPrivacy: "Данные не сохраняются на наших серверах.",
-            txtContact: "Пишите нам на motivetate7@gmail.com."
+const translations = {
+    tr: {
+        navAbout:"HAKKIMIZDA", navPrivacy:"GİZLİLİK", navContact:"İLETİŞİM", langText:"LANGUAGE",
+        sponsor:"SPONSORLU", title1:"Günlük Kalori", title2:"İhtiyacın", labelGender:"Cinsiyet",
+        male:"ERKEK", female:"KADIN", age:"Yaş", height:"Boy (cm)", weight:"Kilo (kg)",
+        labelActivity:"Hareket Seviyesi", act1:"Hareketsiz (Masa başı)", act2:"Hafif (Haftada 1-2 spor)",
+        act3:"Orta (Haftada 3-5 spor)", act4:"Yüksek (Haftada 6-7 spor)", labelGoal:"Hedefin Nedir?",
+        goal1:"📉 Kilo Ver", goal2:"⚖️ Koru", goal3:"🍔 Kilo Al", goal4:"💪 Kas Yap",
+        btnCalc:"HESAPLA",
+        // Makro
+        tool1Title:"🍗 Makro Hesaplama", macroDaily:"Günlük Hedef Kalorin", btnCalcMacro:"MAKROLARI BUL",
+        // Yağ
+        tool2Title:"⚖️ Vücut Yağ Oranı", neck:"Boyun Çevresi (cm)", waist:"Bel Çevresi (cm)",
+        btnCalcFat:"HESAPLA", fatResTitle:"Tahmini Yağ Oranı:",
+        // Su
+        tool3Title:"💧 Günlük Su İhtiyacı", waterWeight:"Kilo (kg)", waterActivity:"Aktivite Seviyesi",
+        wAct1:"Hareketsiz", wAct2:"Hafif Aktif", wAct3:"Orta Aktif", wAct4:"Çok Aktif / Sporcu",
+        btnCalcWater:"HESAPLA", waterResTitle:"Günlük Su İhtiyacın:",
+        waterAdvice:"Suyu gün içine eşit dağıtarak iç. Kahve ve çay su yerine geçmez!",
+        // İdeal Kilo
+        tool4Title:"🎯 İdeal Kilo Hesaplama", idealHeight:"Boy (cm)", idealGender:"Cinsiyet",
+        idealMale:"ERKEK", idealFemale:"KADIN", btnCalcIdeal:"HESAPLA",
+        idealResTitle:"İdeal Kilo Aralığın:", idealAdvice:"Bu değerler genel bir rehberdir. Kas kütlesi, kemik yapısı gibi faktörler ideal kiloyu etkiler.",
+        // BMI
+        tool5Title:"📊 BMI - Vücut Kitle İndeksi", bmiHeight:"Boy (cm)", bmiWeight:"Kilo (kg)",
+        btnCalcBmi:"HESAPLA", bmiResTitle:"BMI Değerin:",
+        bmiUnder:"Zayıf", bmiNormal:"Normal", bmiOver:"Fazla Kilolu", bmiObese:"Obez",
+        bmiAdvUnder:"Kilo almanız önerilir. Sağlıklı ve dengeli beslenmeye özen gösterin.",
+        bmiAdvNormal:"Tebrikler! İdeal aralıktasınız. Sağlıklı yaşamınıza devam edin.",
+        bmiAdvOver:"Hafif kalori açığı ile sağlıklı kilo verebilirsiniz.",
+        bmiAdvObese:"Bir sağlık uzmanına danışmanız önerilir.",
+        // Geri
+        btnBack1:"← Geri Dön", btnBack2:"← Geri Dön", btnBack3:"← Geri Dön",
+        btnBackW:"← Geri Dön", btnBackI:"← Geri Dön", btnBackB:"← Geri Dön",
+        // Sidebar
+        quote:'"Acı geçicidir, ama zafer sonsuzdur!"', sisterTitle:"🔗 KARDEŞ PROJEMİZ",
+        sisterDesc:"LGS'ye hazırlanan dostlarımız için:", sisterLink:"🚀 LGS Puan Hesaplama Sistemi",
+        infoTitle:"PRATİK BİLGİ", infoDesc:"Vücut ağırlığının her 1 kilosu için yaklaşık 30-35 ml su içmeyi ihmal etme.",
+        contactTitle:"📩 İŞ BİRLİĞİ", contactDesc:"Sitemizde yer almak için:", otherTools:"⚙️ DİĞER ARAÇLAR",
+        tool1:"🍗 Makro Hesaplama", tool2:"⚖️ Vücut Yağ Oranı Hesaplama",
+        tool3:"💧 Günlük Su İhtiyacı", tool4:"🎯 İdeal Kilo Hesaplama", tool5:"📊 BMI Hesaplama",
+        footer:"Tüm Hakları Saklıdır.",
+        // Sonuçlar
+        alertFill:"⚠️ Lütfen tüm alanları doldur!",
+        resLose:"Kilo Vermek İçin:", resMaintain:"Kilonu Korumak İçin:",
+        resGain:"Kilo Almak İçin:", resMuscle:"Kas Yapmak İçin:",
+        adv1:"Sağlıklı bir kalori açığı.", adv2:"Formunu korumak için ideal.",
+        adv3:"Kas kütlesi için temiz beslen.", adv4:"Proteini yüksek tutmayı unutma!",
+        // Hakkımızda
+        txtAbout:'MetsCal, sporcular ve sağlıklı yaşam meraklıları için geliştirilmiş profesyonel bir hesaplama aracıdır. Günlük kalori ihtiyacınızı, makro besin değerlerinizi, vücut yağ oranınızı, su ihtiyacınızı, ideal kilonuzu ve BMI değerinizi bilimsel formüllerle hesaplar.<br><br><div style="background:#f8f9fa;padding:12px;border-radius:8px;border-left:4px solid #ff3c00;margin-top:10px;"><strong>👨‍💻 Geliştirici:</strong> Mete Yılmaz — Bilişim Öğrencisi</div>',
+        txtPrivacy:"Verileriniz gizlidir ve hiçbir şekilde sunucularımızda saklanmaz. Tüm hesaplamalar tarayıcınızda gerçekleşir.",
+        txtContact:"İş birliği ve reklam talepleriniz için motivetate7@gmail.com adresinden ulaşabilirsiniz.",
+        // SEO
+        seoTitle:"Kalori Hesaplama Nedir?",
+        seoContent:'<p>Günlük kalori ihtiyacı, vücudunuzun temel metabolizma hızı (BMR) ve aktivite seviyenize göre belirlenir. <strong>MetsCal</strong>, bilimsel olarak kanıtlanmış <em>Mifflin-St Jeor formülünü</em> kullanarak size en doğru sonuçları sunar.</p><p><strong>Nasıl çalışır?</strong> Yaşınız, boyunuz, kilonuz, cinsiyetiniz ve hareket seviyeniz gibi bilgileri girerek bazal metabolizma hızınız hesaplanır. Ardından hedefinize göre günlük almanız gereken kalori miktarı belirlenir.</p><p>Ayrıca <strong>makro besin hesaplama</strong>, <strong>vücut yağ oranı</strong>, <strong>günlük su ihtiyacı</strong>, <strong>ideal kilo</strong> ve <strong>BMI (Vücut Kitle İndeksi)</strong> araçlarımızla sağlığınızı kapsamlı şekilde takip edebilirsiniz.</p>',
+        pageTitle:"MetsCal | Profesyonel Kalori Hesaplayıcı - Günlük Kalori İhtiyacı",
+        metaDesc:"MetsCal ile günlük kalori ihtiyacınızı hesaplayın. Makro besin, vücut yağ oranı, su ihtiyacı, ideal kilo ve BMI hesaplama araçları."
+    },
+    en: {
+        navAbout:"ABOUT", navPrivacy:"PRIVACY", navContact:"CONTACT", langText:"LANGUAGE",
+        sponsor:"SPONSORED", title1:"Daily Calorie", title2:"Needs", labelGender:"Gender",
+        male:"MALE", female:"FEMALE", age:"Age", height:"Height (cm)", weight:"Weight (kg)",
+        labelActivity:"Activity Level", act1:"Sedentary", act2:"Lightly Active",
+        act3:"Moderately Active", act4:"Very Active", labelGoal:"What is your goal?",
+        goal1:"📉 Lose Weight", goal2:"⚖️ Maintain", goal3:"🍔 Gain Weight", goal4:"💪 Build Muscle",
+        btnCalc:"CALCULATE",
+        tool1Title:"🍗 Macro Calculator", macroDaily:"Daily Calorie Goal", btnCalcMacro:"FIND MACROS",
+        tool2Title:"⚖️ Body Fat Percentage", neck:"Neck (cm)", waist:"Waist (cm)",
+        btnCalcFat:"CALCULATE", fatResTitle:"Estimated Fat %:",
+        tool3Title:"💧 Daily Water Intake", waterWeight:"Weight (kg)", waterActivity:"Activity Level",
+        wAct1:"Sedentary", wAct2:"Lightly Active", wAct3:"Moderately Active", wAct4:"Very Active / Athlete",
+        btnCalcWater:"CALCULATE", waterResTitle:"Your Daily Water Need:",
+        waterAdvice:"Spread your water intake throughout the day. Coffee and tea don't count!",
+        tool4Title:"🎯 Ideal Weight Calculator", idealHeight:"Height (cm)", idealGender:"Gender",
+        idealMale:"MALE", idealFemale:"FEMALE", btnCalcIdeal:"CALCULATE",
+        idealResTitle:"Your Ideal Weight Range:", idealAdvice:"These values are general guidelines. Muscle mass, bone structure and other factors affect ideal weight.",
+        tool5Title:"📊 BMI - Body Mass Index", bmiHeight:"Height (cm)", bmiWeight:"Weight (kg)",
+        btnCalcBmi:"CALCULATE", bmiResTitle:"Your BMI:",
+        bmiUnder:"Underweight", bmiNormal:"Normal", bmiOver:"Overweight", bmiObese:"Obese",
+        bmiAdvUnder:"You should consider gaining weight. Focus on healthy and balanced nutrition.",
+        bmiAdvNormal:"Congratulations! You are in the ideal range. Keep up your healthy lifestyle.",
+        bmiAdvOver:"A moderate calorie deficit can help you lose weight healthily.",
+        bmiAdvObese:"It is recommended to consult a healthcare professional.",
+        btnBack1:"← Go Back", btnBack2:"← Go Back", btnBack3:"← Go Back",
+        btnBackW:"← Go Back", btnBackI:"← Go Back", btnBackB:"← Go Back",
+        quote:'"Pain is temporary, pride is forever!"', sisterTitle:"🔗 SISTER PROJECT",
+        sisterDesc:"For friends preparing for LGS:", sisterLink:"🚀 LGS Score Calculator",
+        infoTitle:"PRACTICAL INFO", infoDesc:"Drink 30-35 ml of water for every kg of body weight.",
+        contactTitle:"📩 COOPERATION", contactDesc:"To be featured on our site:", otherTools:"⚙️ OTHER TOOLS",
+        tool1:"🍗 Macro Calculation", tool2:"⚖️ Body Fat Calculation",
+        tool3:"💧 Daily Water Intake", tool4:"🎯 Ideal Weight Calculator", tool5:"📊 BMI Calculator",
+        footer:"All Rights Reserved.",
+        alertFill:"⚠️ Please fill all fields!",
+        resLose:"To Lose Weight:", resMaintain:"To Maintain Weight:",
+        resGain:"To Gain Weight:", resMuscle:"To Build Muscle:",
+        adv1:"A healthy calorie deficit.", adv2:"Perfect for staying in shape.",
+        adv3:"Eat clean for mass.", adv4:"Don't forget to keep protein high!",
+        txtAbout:'MetsCal is a professional tool designed for athletes and health enthusiasts. It calculates daily calorie needs, macronutrient values, body fat percentage, water intake, ideal weight and BMI using scientific formulas.<br><br><div style="background:#f8f9fa;padding:12px;border-radius:8px;border-left:4px solid #ff3c00;margin-top:10px;"><strong>👨‍💻 Developer:</strong> Mete Yılmaz — IT Teacher</div>',
+        txtPrivacy:"Your data is private and is not stored on our servers. All calculations are performed in your browser.",
+        txtContact:"Contact us at motivetate7@gmail.com for cooperation and advertising inquiries.",
+        seoTitle:"What is Calorie Calculation?",
+        seoContent:'<p>Daily calorie needs are determined by your Basal Metabolic Rate (BMR) and activity level. <strong>MetsCal</strong> uses the scientifically proven <em>Mifflin-St Jeor equation</em> to provide accurate results.</p><p>You can also use our <strong>macro calculator</strong>, <strong>body fat calculator</strong>, <strong>water intake calculator</strong>, <strong>ideal weight calculator</strong> and <strong>BMI calculator</strong> to comprehensively track your health.</p>',
+        pageTitle:"MetsCal | Professional Calorie Calculator - Daily Calorie Needs",
+        metaDesc:"Calculate your daily calorie needs with MetsCal. Macro, body fat, water intake, ideal weight and BMI calculators included."
+    },
+    ru: {
+        navAbout:"О НАС", navPrivacy:"ПРИВАТНОСТЬ", navContact:"КОНТАКТЫ", langText:"ЯЗЫК",
+        sponsor:"СПОНСОР", title1:"Дневные", title2:"Калории", labelGender:"Пол",
+        male:"МУЖЧИНА", female:"ЖЕНЩИНА", age:"Возраст", height:"Рост (см)", weight:"Вес (кг)",
+        labelActivity:"Активность", act1:"Сидячий", act2:"Легкий",
+        act3:"Средний", act4:"Высокий", labelGoal:"Какая ваша цель?",
+        goal1:"📉 Похудеть", goal2:"⚖️ Удержать", goal3:"🍔 Набрать", goal4:"💪 Мышцы",
+        btnCalc:"РАССЧИТАТЬ",
+        tool1Title:"🍗 Расчет Макросов", macroDaily:"Цель калорий", btnCalcMacro:"РАССЧИТАТЬ",
+        tool2Title:"⚖️ Процент жира", neck:"Шея (см)", waist:"Талия (см)",
+        btnCalcFat:"РАССЧИТАТЬ", fatResTitle:"Процент жира:",
+        tool3Title:"💧 Дневная норма воды", waterWeight:"Вес (кг)", waterActivity:"Уровень активности",
+        wAct1:"Сидячий", wAct2:"Легкий", wAct3:"Средний", wAct4:"Активный / Спортсмен",
+        btnCalcWater:"РАССЧИТАТЬ", waterResTitle:"Ваша дневная норма воды:",
+        waterAdvice:"Распределяйте воду равномерно в течение дня. Кофе и чай не считаются!",
+        tool4Title:"🎯 Идеальный вес", idealHeight:"Рост (см)", idealGender:"Пол",
+        idealMale:"МУЖЧИНА", idealFemale:"ЖЕНЩИНА", btnCalcIdeal:"РАССЧИТАТЬ",
+        idealResTitle:"Ваш идеальный диапазон веса:", idealAdvice:"Эти значения — общее руководство. Мышечная масса и телосложение влияют на идеальный вес.",
+        tool5Title:"📊 BMI - Индекс массы тела", bmiHeight:"Рост (см)", bmiWeight:"Вес (кг)",
+        btnCalcBmi:"РАССЧИТАТЬ", bmiResTitle:"Ваш BMI:",
+        bmiUnder:"Недовес", bmiNormal:"Норма", bmiOver:"Избыточный вес", bmiObese:"Ожирение",
+        bmiAdvUnder:"Рекомендуется набрать вес. Питайтесь здорово и сбалансированно.",
+        bmiAdvNormal:"Поздравляем! Вы в идеальном диапазоне. Продолжайте!",
+        bmiAdvOver:"Умеренный дефицит калорий поможет похудеть.",
+        bmiAdvObese:"Рекомендуется обратиться к врачу.",
+        btnBack1:"← Назад", btnBack2:"← Назад", btnBack3:"← Назад",
+        btnBackW:"← Назад", btnBackI:"← Назад", btnBackB:"← Назад",
+        quote:'"Боль временна, триумф вечен!"', sisterTitle:"🔗 НАШ ПРОЕКТ",
+        sisterDesc:"Для подготовки к LGS:", sisterLink:"🚀 Калькулятор баллов LGS",
+        infoTitle:"ИНФО", infoDesc:"Пейте 30-35 мл воды на каждый кг веса.",
+        contactTitle:"📩 СОТРУДНИЧЕСТВО", contactDesc:"Для связи:", otherTools:"⚙️ ИНСТРУМЕНТЫ",
+        tool1:"🍗 Расчет макросов", tool2:"⚖️ Процент жира",
+        tool3:"💧 Дневная норма воды", tool4:"🎯 Идеальный вес", tool5:"📊 BMI Калькулятор",
+        footer:"Все права защищены.",
+        alertFill:"⚠️ Заполните все поля!",
+        resLose:"Для похудения:", resMaintain:"Для поддержания:",
+        resGain:"Для набора веса:", resMuscle:"Для мышц:",
+        adv1:"Здоровый дефицит калорий.", adv2:"Идеально для формы.",
+        adv3:"Ешьте чисто для массы.", adv4:"Не забывайте о белке!",
+        txtAbout:'MetsCal — это профессиональный инструмент для спортсменов и любителей здорового образа жизни. Рассчитывает калории, макронутриенты, процент жира, норму воды, идеальный вес и BMI.<br><br><div style="background:#f8f9fa;padding:12px;border-radius:8px;border-left:4px solid #ff3c00;margin-top:10px;"><strong>👨‍💻 Разработчик:</strong> Мете Йылмаз — Учитель информатики</div>',
+        txtPrivacy:"Данные не сохраняются на серверах. Все расчеты выполняются в браузере.",
+        txtContact:"Пишите на motivetate7@gmail.com для сотрудничества.",
+        seoTitle:"Что такое расчет калорий?",
+        seoContent:'<p>Суточная потребность в калориях определяется базовым метаболизмом (BMR) и активностью. <strong>MetsCal</strong> использует <em>формулу Миффлина-Сан Жеора</em>.</p><p>Также используйте <strong>калькулятор макросов</strong>, <strong>процент жира</strong>, <strong>норму воды</strong>, <strong>идеальный вес</strong> и <strong>BMI</strong>.</p>',
+        pageTitle:"MetsCal | Калькулятор калорий - Дневная норма",
+        metaDesc:"Рассчитайте калории с MetsCal. Макросы, жир, вода, идеальный вес и BMI."
+    }
+};
+
+let currentLang = 'tr';
+let currentInfoType = null;
+
+function hideErrors() {
+    ['calError','macroError','fatError','waterError','idealError','bmiError'].forEach(id => {
+        document.getElementById(id).style.display = 'none';
+    });
+}
+
+function showPage(pageId) {
+    ['mainCalculator','infoPage','macroCalc','fatCalc','waterCalc','idealCalc','bmiCalc'].forEach(id => {
+        document.getElementById(id).style.display = 'none';
+    });
+    ['resultArea','macroResult','fatResult','waterResult','idealResult','bmiResult'].forEach(id => {
+        document.getElementById(id).style.display = 'none';
+    });
+    document.getElementById('seoContentSection').style.display = 'none';
+    hideErrors();
+
+    if(pageId === 'main') {
+        document.getElementById('mainCalculator').style.display = 'block';
+        document.getElementById('seoContentSection').style.display = 'block';
+    }
+    else if(pageId === 'macro') document.getElementById('macroCalc').style.display = 'block';
+    else if(pageId === 'fat') document.getElementById('fatCalc').style.display = 'block';
+    else if(pageId === 'water') document.getElementById('waterCalc').style.display = 'block';
+    else if(pageId === 'ideal') document.getElementById('idealCalc').style.display = 'block';
+    else if(pageId === 'bmi') document.getElementById('bmiCalc').style.display = 'block';
+
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function showInfo(type) {
+    currentInfoType = type;
+    showPage('none');
+    document.getElementById('infoPage').style.display = 'block';
+    updateInfoContent();
+}
+
+function updateInfoContent() {
+    if (!currentInfoType) return;
+    const content = document.getElementById('infoContent');
+    const l = translations[currentLang];
+    if(currentInfoType === 'about') content.innerHTML = `<h3>${l.navAbout}</h3><p>${l.txtAbout}</p>`;
+    else if(currentInfoType === 'privacy') content.innerHTML = `<h3>${l.navPrivacy}</h3><p>${l.txtPrivacy}</p>`;
+    else if(currentInfoType === 'contact') content.innerHTML = `<h3>${l.navContact}</h3><p>${l.txtContact}</p>`;
+}
+
+function setLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.setAttribute('lang', lang);
+    document.title = translations[lang].pageTitle;
+
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if(metaDesc) metaDesc.setAttribute('content', translations[lang].metaDesc);
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if(ogTitle) ogTitle.setAttribute('content', translations[lang].pageTitle);
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if(ogDesc) ogDesc.setAttribute('content', translations[lang].metaDesc);
+    const twTitle = document.querySelector('meta[name="twitter:title"]');
+    if(twTitle) twTitle.setAttribute('content', translations[lang].pageTitle);
+    const twDesc = document.querySelector('meta[name="twitter:description"]');
+    if(twDesc) twDesc.setAttribute('content', translations[lang].metaDesc);
+
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById('btn-' + lang).classList.add('active');
+
+    for (let key in translations[lang]) {
+        let el = document.getElementById('t-' + key);
+        if (el) {
+            if(key === 'seoContent') el.innerHTML = translations[lang][key];
+            else el.innerText = translations[lang][key];
         }
-    };
-
-    let currentLang = 'tr';
-    let currentInfoType = null;
-
-    function hideErrors() {
-        document.getElementById('calError').style.display = 'none';
-        document.getElementById('macroError').style.display = 'none';
-        document.getElementById('fatError').style.display = 'none';
     }
+    updateInfoContent();
+}
 
-    function showPage(pageId) {
-        document.getElementById('mainCalculator').style.display = 'none';
-        document.getElementById('infoPage').style.display = 'none';
-        document.getElementById('macroCalc').style.display = 'none';
-        document.getElementById('fatCalc').style.display = 'none';
+// ===== KALORİ =====
+function calculateCalorie() {
+    hideErrors();
+    const age = parseInt(document.getElementById('age').value);
+    const weight = parseInt(document.getElementById('weight').value);
+    const height = parseInt(document.getElementById('height').value);
+    const activity = parseFloat(document.getElementById('activity').value);
+    const gender = document.querySelector('input[name="gender"]:checked').value;
+    const goal = document.querySelector('input[name="goal"]:checked').value;
+
+    if (!age || !weight || !height) {
+        document.getElementById('calError').innerText = translations[currentLang].alertFill;
+        document.getElementById('calError').style.display = 'block';
         document.getElementById('resultArea').style.display = 'none';
+        return;
+    }
+
+    let bmr = (10 * weight) + (6.25 * height) - (5 * age);
+    bmr = (gender === 'male') ? bmr + 5 : bmr - 161;
+    const maintenance = bmr * activity;
+    let final = 0, titleKey = "", advKey = "";
+
+    if(goal === 'lose') { final = maintenance - 500; titleKey = "resLose"; advKey = "adv1"; }
+    else if(goal === 'maintain') { final = maintenance; titleKey = "resMaintain"; advKey = "adv2"; }
+    else if(goal === 'gain') { final = maintenance + 400; titleKey = "resGain"; advKey = "adv3"; }
+    else { final = maintenance + 250; titleKey = "resMuscle"; advKey = "adv4"; }
+
+    document.getElementById('calResult').innerText = Math.round(final) + " kcal";
+    document.getElementById('resTitle').innerText = translations[currentLang][titleKey];
+    document.getElementById('resAdvice').innerText = translations[currentLang][advKey];
+    document.getElementById('resultArea').style.display = 'block';
+}
+
+// ===== MAKRO =====
+function calculateMacros() {
+    hideErrors();
+    const cal = parseInt(document.getElementById('macroCalInput').value);
+    if(!cal) {
+        document.getElementById('macroError').innerText = translations[currentLang].alertFill;
+        document.getElementById('macroError').style.display = 'block';
         document.getElementById('macroResult').style.display = 'none';
+        return;
+    }
+    document.getElementById('resPro').innerText = Math.round((cal * 0.30) / 4);
+    document.getElementById('resCarb').innerText = Math.round((cal * 0.45) / 4);
+    document.getElementById('resFat').innerText = Math.round((cal * 0.25) / 9);
+    document.getElementById('macroResult').style.display = 'block';
+}
+
+// ===== YAĞ ORANI =====
+function calculateFat() {
+    hideErrors();
+    const n = parseFloat(document.getElementById('neck').value);
+    const w = parseFloat(document.getElementById('waist').value);
+    const h = parseFloat(document.getElementById('height').value) || 170;
+    if(!n || !w) {
+        document.getElementById('fatError').innerText = translations[currentLang].alertFill;
+        document.getElementById('fatError').style.display = 'block';
         document.getElementById('fatResult').style.display = 'none';
-        hideErrors(); // Sayfa değiştiğinde hataları da gizle
-
-        if(pageId === 'main') document.getElementById('mainCalculator').style.display = 'block';
-        else if(pageId === 'macro') document.getElementById('macroCalc').style.display = 'block';
-        else if(pageId === 'fat') document.getElementById('fatCalc').style.display = 'block';
+        return;
     }
+    let fat = 495 / (1.0324 - 0.19077 * Math.log10(w - n) + 0.15456 * Math.log10(h)) - 450;
+    if(fat < 2) fat = 5;
+    document.getElementById('resFatPerc').innerText = "%" + Math.round(fat);
+    document.getElementById('fatResult').style.display = 'block';
+}
 
-    function showInfo(type) { 
-        currentInfoType = type; 
-        showPage('none'); 
-        document.getElementById('infoPage').style.display = 'block'; 
-        updateInfoContent(); 
+// ===== SU İHTİYACI =====
+function calculateWater() {
+    hideErrors();
+    const w = parseFloat(document.getElementById('waterWeight').value);
+    const ml = parseFloat(document.getElementById('waterActivity').value);
+    if(!w) {
+        document.getElementById('waterError').innerText = translations[currentLang].alertFill;
+        document.getElementById('waterError').style.display = 'block';
+        document.getElementById('waterResult').style.display = 'none';
+        return;
     }
+    const liters = (w * ml) / 1000;
+    const glasses = Math.round(liters / 0.25);
+    document.getElementById('resWater').innerText = liters.toFixed(1) + " L (" + glasses + " 🥤)";
+    document.getElementById('waterAdvice').innerText = translations[currentLang].waterAdvice;
+    document.getElementById('waterResult').style.display = 'block';
+}
 
-    function updateInfoContent() { 
-        if (!currentInfoType) return; 
-        const content = document.getElementById('infoContent'); 
-        const l = translations[currentLang]; 
-        if(currentInfoType === 'about') content.innerHTML = `<h3>${l.navAbout}</h3><p>${l.txtAbout}</p>`; 
-        else if(currentInfoType === 'privacy') content.innerHTML = `<h3>${l.navPrivacy}</h3><p>${l.txtPrivacy}</p>`; 
-        else if(currentInfoType === 'contact') content.innerHTML = `<h3>${l.navContact}</h3><p>${l.txtContact}</p>`; 
+// ===== İDEAL KİLO =====
+function calculateIdeal() {
+    hideErrors();
+    const h = parseFloat(document.getElementById('idealHeight').value);
+    const g = document.querySelector('input[name="idealGender"]:checked').value;
+    if(!h) {
+        document.getElementById('idealError').innerText = translations[currentLang].alertFill;
+        document.getElementById('idealError').style.display = 'block';
+        document.getElementById('idealResult').style.display = 'none';
+        return;
     }
-
-    function setLanguage(lang) { 
-        currentLang = lang; 
-        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active')); 
-        document.getElementById('btn-' + lang).classList.add('active'); 
-        for (let key in translations[lang]) { 
-            let el = document.getElementById('t-' + key); 
-            if (el) el.innerText = translations[lang][key]; 
-        } 
-        updateInfoContent(); 
+    const inches = h / 2.54;
+    let devine, robinson, miller;
+    if(g === 'male') {
+        devine = 50 + 2.3 * (inches - 60);
+        robinson = 52 + 1.9 * (inches - 60);
+        miller = 56.2 + 1.41 * (inches - 60);
+    } else {
+        devine = 45.5 + 2.3 * (inches - 60);
+        robinson = 49 + 1.7 * (inches - 60);
+        miller = 53.1 + 1.36 * (inches - 60);
     }
+    const minW = Math.round(Math.min(devine, robinson, miller));
+    const maxW = Math.round(Math.max(devine, robinson, miller));
+    document.getElementById('resIdeal').innerText = minW + " - " + maxW + " kg";
+    document.getElementById('idealAdvice').innerText = translations[currentLang].idealAdvice;
+    document.getElementById('idealResult').style.display = 'block';
+}
 
-    function calculateCalorie() { 
-        hideErrors();
-        const age = parseInt(document.getElementById('age').value); 
-        const weight = parseInt(document.getElementById('weight').value); 
-        const height = parseInt(document.getElementById('height').value); 
-        const activity = parseFloat(document.getElementById('activity').value); 
-        const gender = document.querySelector('input[name="gender"]:checked').value; 
-        const goal = document.querySelector('input[name="goal"]:checked').value; 
-
-        if (!age || !weight || !height) { 
-            document.getElementById('calError').innerText = translations[currentLang].alertFill;
-            document.getElementById('calError').style.display = 'block';
-            document.getElementById('resultArea').style.display = 'none';
-            return; 
-        } 
-
-        let bmr = (10 * weight) + (6.25 * height) - (5 * age); 
-        bmr = (gender === 'male') ? bmr + 5 : bmr - 161; 
-        const maintenance = bmr * activity; 
-        let final = 0, titleKey = "", advKey = ""; 
-        
-        if(goal === 'lose') { final = maintenance - 500; titleKey = "resLose"; advKey = "adv1"; } 
-        else if(goal === 'maintain') { final = maintenance; titleKey = "resMaintain"; advKey = "adv2"; } 
-        else if(goal === 'gain') { final = maintenance + 400; titleKey = "resGain"; advKey = "adv3"; } 
-        else { final = maintenance + 250; titleKey = "resMuscle"; advKey = "adv4"; } 
-        
-        document.getElementById('calResult').innerText = Math.round(final) + " kcal"; 
-        document.getElementById('resTitle').innerText = translations[currentLang][titleKey]; 
-        document.getElementById('resAdvice').innerText = translations[currentLang][advKey]; 
-        document.getElementById('resultArea').style.display = 'block'; 
+// ===== BMI =====
+function calculateBMI() {
+    hideErrors();
+    const h = parseFloat(document.getElementById('bmiHeight').value);
+    const w = parseFloat(document.getElementById('bmiWeight').value);
+    if(!h || !w) {
+        document.getElementById('bmiError').innerText = translations[currentLang].alertFill;
+        document.getElementById('bmiError').style.display = 'block';
+        document.getElementById('bmiResult').style.display = 'none';
+        return;
     }
+    const bmi = w / Math.pow(h / 100, 2);
+    const bmiVal = bmi.toFixed(1);
+    document.getElementById('resBmi').innerText = bmiVal;
 
-    function calculateMacros() { 
-        hideErrors();
-        const cal = parseInt(document.getElementById('macroCalInput').value); 
-        if(!cal) { 
-            document.getElementById('macroError').innerText = translations[currentLang].alertFill;
-            document.getElementById('macroError').style.display = 'block';
-            document.getElementById('macroResult').style.display = 'none';
-            return; 
-        } 
-        document.getElementById('resPro').innerText = Math.round((cal * 0.30) / 4); 
-        document.getElementById('resCarb').innerText = Math.round((cal * 0.45) / 4); 
-        document.getElementById('resFat').innerText = Math.round((cal * 0.25) / 9); 
-        document.getElementById('macroResult').style.display = 'block'; 
-    }
+    let catText = "", catColor = "", advText = "";
+    const l = translations[currentLang];
+    if(bmi < 18.5) { catText = l.bmiUnder; catColor = "#2196F3"; advText = l.bmiAdvUnder; }
+    else if(bmi < 25) { catText = l.bmiNormal; catColor = "#4CAF50"; advText = l.bmiAdvNormal; }
+    else if(bmi < 30) { catText = l.bmiOver; catColor = "#FF9800"; advText = l.bmiAdvOver; }
+    else { catText = l.bmiObese; catColor = "#f44336"; advText = l.bmiAdvObese; }
 
-    function calculateFat() { 
-        hideErrors();
-        const n = parseFloat(document.getElementById('neck').value); 
-        const w = parseFloat(document.getElementById('waist').value); 
-        const h = parseFloat(document.getElementById('height').value) || 170; 
-        if(!n || !w) { 
-            document.getElementById('fatError').innerText = translations[currentLang].alertFill;
-            document.getElementById('fatError').style.display = 'block';
-            document.getElementById('fatResult').style.display = 'none';
-            return; 
-        } 
-        let fat = 495 / (1.0324 - 0.19077 * Math.log10(w - n) + 0.15456 * Math.log10(h)) - 450; 
-        if(fat < 2) fat = 5; 
-        document.getElementById('resFatPerc').innerText = "%" + Math.round(fat); 
-        document.getElementById('fatResult').style.display = 'block'; 
-    }
+    document.getElementById('bmiCategory').innerText = catText;
+    document.getElementById('bmiCategory').style.background = catColor;
+    document.getElementById('bmiCategory').style.color = "#fff";
+    document.getElementById('bmiAdvice').innerText = advText;
+    document.getElementById('bmiResult').style.display = 'block';
+}
 </script>
 </body>
 </html>
