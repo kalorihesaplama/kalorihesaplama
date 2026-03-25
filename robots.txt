@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kalorihesaplama.github.io/kalorihesaplama/sitemap.xml
